@@ -38,7 +38,7 @@
         @include flex-direction-row();
         @include flex-center();
         
-        padding: 12px; 
+        padding: 18px; 
         background-color: $backgroundColorPrimaire;
         
         &__icone
@@ -46,7 +46,15 @@
             size: 10px;
            
         }
-         
+        &__location-text
+           {
+            margin-left: 18px;
+            font-size: 18px;
+           }
+        &__modif
+            {
+                font-size: 20px;
+            }
     }
         
   
@@ -57,6 +65,8 @@
 {
     @include border-main(); 
     background-color: $backgroundColorSecondaire;
+    padding: 23px;
+    
     &__menuList /*enfant1*/ 
     {
        @include flex-center();
@@ -73,7 +83,19 @@
         {
             margin: 0px;
             @include flex-center();
-           
+            font-weight: bold;
+            font-size: 27px;
+            line-height: 15px;
+            margin-top: 15px;
+        }
+        &--modifText1
+        {
+            margin: 0px;
+            @include flex-center();
+            font-size: 18px;
+            line-height: 10px;
+            margin-top: 18px;
+            color: #6a6a6a;
         }
     }
     
@@ -81,24 +103,19 @@
     &__btn /*enfant2*/ 
     {
         @include flex-center();
-      
-        
+    
     }
         &__btn--modifier /*petit enfant*/ 
         {
             background-image: linear-gradient(#FF79DA, #9356DC);
             @include border-radius-btn();
             @include mobile-only;
-          
-            opacity: 0.8; 
-            margin-top: 20px;/*DRY*/ 
-            margin-bottom: 50px;
-            cursor: pointer;
+            box-shadow: 3px 3px 3px rgb(184, 184, 184);
           
         }
         &__btn--text-decoration
         {
-            text-decoration: none;
+           @include text-btn-recherche;
         }
 
 }
@@ -112,7 +129,7 @@
         {
         @include main-fonction-texte();  
           
-        margin: 20px;    /*DRY*/ 
+        padding: 20px;    /*DRY*/ 
     }
     &__btn
     {
@@ -125,9 +142,7 @@
       {
         @include button-modif;
         @include mobile-only;
-        border-radius: 30px;
-        width: 90%;
-        height: 90px;
+       
    
       }
        &__btn--icone-modif
@@ -142,7 +157,7 @@
         {
             text-decoration: none;
             color: black;
-            font-size: 25px;
+        
         }
      
       

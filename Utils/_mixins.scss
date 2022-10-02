@@ -32,9 +32,18 @@
 
 @mixin border-radius-btn {
     border-radius: 30px;
-    width: 60%;
-    height: 50px;
-    
+    width: 75%;
+    height: 63px;
+    opacity: 1; 
+    margin-top: 20px;/*DRY*/ 
+    margin-bottom: 50px;
+    cursor: pointer;
+  
+}
+@mixin text-btn-recherche {
+    text-decoration: none;
+    color: white; 
+    font-size: 18px
 }
 
 @mixin main-fonction-texte {
@@ -43,10 +52,12 @@
     margin: 20px;
 }
 @mixin button-modif {
-    width: 80%;
-    margin-left: 10%;
+   
+    margin-left: 20px;
     margin-bottom: 5%;
     border-radius: 30px;
     height: 60px;
     cursor: pointer;
+    width: 85%;
+    height: 90px;
 }
