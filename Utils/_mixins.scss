@@ -1,0 +1,51 @@
+
+/*les mixins */ 
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        transition: transform 400ms;
+        &:hover
+        {
+            transform: scale(1.15);
+        }
+    
+        }
+
+  }
+    
+@mixin border-main {
+    border: 5px solid red;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-direction-colum {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-direction-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin border-radius-btn {
+    border-radius: 30px;
+    width: 60%;
+    height: 50px;
+    
+}
+
+@mixin main-fonction-texte {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+@mixin button-modif {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    border-radius: 30px;
+    height: 60px;
+    cursor: pointer;
+}

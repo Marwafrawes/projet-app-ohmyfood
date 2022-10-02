@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>booki-app</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/bc7340b667.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="phone.css" />
+ 
+</head>
 <body>
 
-<h1>Ena marwa mhabletkom ye jme3a hahaha</h1>
+<header class="headerPageAccueil">
+    <div class="headerPageAccueil__logo"> 
+        <img class="headerPageAccueil__logo--modifierImg" src="assets/images/logo/ohmyfood.png" alt="logo-page-accueil" />
+    </div>
+    <div class="headerPageAccueil__localisation">
+        <div class="headerPageAccueil__localisation__icone">
+            <i class="fa-solid fa-location-dot"></i> 
+            <label >Paris, Belleville</label> 
+        </div>
+         
+    </div> 
+</header>
 
-<p>My first paragraph.</p>
+
+<main class="main-recherche"> <!--parent-->
+  
+    <section class="main-recherche__menuList"> <!--enfant1-->
+
+        <div class="main-recherche__menuList--retrouveListe"> <!--petit_enfant1-->
+            <h1 class="main-recherche__menuList--modifText">Retrouvez le menu qui </h1>
+            <h1 class="main-recherche__menuList--modifText">vous convient</h2> 
+            <h3 class="main-recherche__menuList--modifText">Découvrez des restaurants d'exception,</h3>
+            <h3 class="main-recherche__menuList--modifText">séléctionnés par nos soins</h3>
+        </div>
+        
+    </section>
+
+    <section class="main-recherche__btn"> <!--enfant 2 -->
+      
+            <button class="main-recherche__btn--modifier">
+               <a href="#" class="main-recherche__btn--text-decoration">Explorer nos restaurants </a> 
+            </button>
+     
+    </section>
+</main>
+
+<main class="main-fonction"> <!--Parent-->
+    <section class="main-fonction__texte"> <!--enfant1-->
+        <label> Fonctionnement</label>
+    </section>
+    <section  class="main-fonction__btn"> <!--enfant 2 -->
+      
+            <button class="main-fonction__btn--modif">   <!--petit enfant 2 -->
+                <a href="#" class="main-fonction__btn--modif-text"><i class="main-fonction__btn--icone-modif fa-solid fa-mobile-screen-button"></i> Choisissez un restaurant</a>
+            </button>
+      
+        <button class="main-fonction__btn--modif">   <!--petit enfant 2 -->
+            <a href="#" class="main-fonction__btn--modif-text"> <i class="main-fonction__btn--icone-modif fa-solid fa-list-ul"></i>Composez votre menu</a>
+        </button>
+        <button class="main-fonction__btn--modif">   <!--petit enfant 2 -->
+            <a href="#" class="main-fonction__btn--modif-text"> <i class="main-fonction__btn--icone-modif fa-solid fa-store"></i>Dégustez au restaurant</a>
+        </button>
+    </section>
+
+</main>
+
+
+
+
+
+
+
 
 </body>
-</html>
 
+</html>

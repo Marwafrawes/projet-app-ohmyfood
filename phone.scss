@@ -1,0 +1,157 @@
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+
+@import "./Utils/variables";
+@import "./Utils/mixins";
+
+
+.headerPageAccueil /*parent*/ 
+{
+   @include border-main();
+   @include flex-direction-colum();
+    width: 100%;
+  
+ 
+    &__logo /*enfant 1 */ 
+    {
+        @include flex-center();
+        
+       
+        &--modifierImg /*petit-enfant*/ 
+        {
+            width: 60%;
+            padding: 15px; 
+        }
+    }
+    .headerPageAccueil__localisation /*enfant 2*/ 
+    {
+        @include flex-direction-row();
+        @include flex-center();
+        
+        padding: 12px; 
+        background-color: $backgroundColorPrimaire;
+        
+        &__icone
+        {
+            size: 10px;
+           
+        }
+         
+    }
+        
+  
+}
+
+
+.main-recherche /*parent*/ 
+{
+    @include border-main(); 
+    background-color: $backgroundColorSecondaire;
+    &__menuList /*enfant1*/ 
+    {
+       @include flex-center();
+     
+        &--retrouveListe /*petit-enfant*/ 
+        {
+           
+            @include flex-direction-colum();
+            
+            width: 100%;
+        }
+
+        &--modifText
+        {
+            margin: 0px;
+            @include flex-center();
+           
+        }
+    }
+    
+
+    &__btn /*enfant2*/ 
+    {
+        @include flex-center();
+      
+        
+    }
+        &__btn--modifier /*petit enfant*/ 
+        {
+            background-image: linear-gradient(#FF79DA, #9356DC);
+            @include border-radius-btn();
+            @include mobile-only;
+          
+            opacity: 0.8; 
+            margin-top: 20px;/*DRY*/ 
+            margin-bottom: 50px;
+            cursor: pointer;
+          
+        }
+        &__btn--text-decoration
+        {
+            text-decoration: none;
+        }
+
+}
+.main-fonction
+{
+    @include border-main();
+ 
+ 
+  
+    &__texte
+        {
+        @include main-fonction-texte();  
+          
+        margin: 20px;    /*DRY*/ 
+    }
+    &__btn
+    {
+        @include flex-direction-colum();
+        
+        margin-bottom:10%; /*DRY*/ 
+        
+    }
+        &__btn--modif 
+      {
+        @include button-modif;
+        @include mobile-only;
+        border-radius: 30px;
+        width: 90%;
+        height: 90px;
+   
+      }
+       &__btn--icone-modif
+
+            {
+                font-size: 25px;
+                margin-right: 10px;
+                text-decoration: none;
+                color: black;
+            }
+        &__btn--modif-text
+        {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+        }
+     
+      
+    
+
+}
+
+
+
+
