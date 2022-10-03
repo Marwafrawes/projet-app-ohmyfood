@@ -107,10 +107,10 @@
     }
         &__btn--modifier /*petit enfant*/ 
         {
-            background-image: linear-gradient(#FF79DA, #9356DC);
+           
             @include border-radius-btn();
             @include mobile-only;
-            box-shadow: 3px 3px 3px rgb(184, 184, 184);
+            @include btn--modifier;
           
         }
         &__btn--text-decoration
@@ -142,21 +142,33 @@
       {
         @include button-modif;
         @include mobile-only;
-       
-   
+        
       }
-       &__btn--icone-modif
+      &__btn--icone-modif
+      {
+       @include icone-modif;
+      }
+      &__btn--icone-modif:hover
+      {
+        background-color: $colourHoverBtn ;
+      }
+
+
+       &__btn--icone-modif1
 
             {
-                font-size: 25px;
-                margin-right: 10px;
+                font-size: 18px;
+                padding-right: 20px;
                 text-decoration: none;
-                color: black;
+                color: #0000005c;
+               
+              
             }
         &__btn--modif-text
         {
             text-decoration: none;
             color: black;
+            font-weight: bold;
         
         }
      
@@ -165,6 +177,10 @@
 
 }
 
+button:hover
+{
+    background-color: $colourHoverBtn;
+}
 
 
 
