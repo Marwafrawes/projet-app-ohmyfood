@@ -119,21 +119,20 @@
         }
 
 }
+
 .main-fonction
 {
     @include border-main();
- 
- 
   
     &__texte
         {
-        @include main-fonction-texte();  
+        @include main-fonction-texte;  
           
         padding: 20px;    /*DRY*/ 
     }
     &__btn
     {
-        @include flex-direction-colum();
+        @include flex-direction-colum;
         
         margin-bottom:10%; /*DRY*/ 
         
@@ -142,39 +141,23 @@
       {
         @include button-modif;
         @include mobile-only;
+       
         
       }
       &__btn--icone-modif
       {
        @include icone-modif;
       }
-      &__btn--icone-modif:hover
-      {
-        background-color: $colourHoverBtn ;
-      }
-
 
        &__btn--icone-modif1
 
-            {
-                font-size: 18px;
-                padding-right: 20px;
-                text-decoration: none;
-                color: #0000005c;
-               
-              
-            }
+      {
+        @include icone-modif1;      
+     }
         &__btn--modif-text
         {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        
+         @include modif-text;
         }
-     
-      
-    
-
 }
 
 button:hover
@@ -183,4 +166,55 @@ button:hover
 }
 
 
+/*main 3 */ 
+.main-restaurants
+{
+    background-color: $backgroundColorPrimaire; 
+    @include border-main; 
+    &__texte
+    {
+        @include main-fonction-texte; 
+    }
+    &__bloc-img
+    {
+        width: 95%;
+        border-radius: 20px;
+        margin: 10px;
+        background-color: white;
+        height: 260px;
+    }
+
+        &__bloc-img--image1
+            {
+                width: 100%;
+                object-fit: cover;
+                height: 65%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px; 
+        }
+        &__bloc--text1Image1
+        {
+         font-weight: bold;
+         font-size: 20px;
+         margin-left: 9px;
+         
+        }
+        &__bloc--text2Image1
+        {
+        
+            font-weight: inherit;
+            font-size: 20px;
+            margin-top: -10px;
+            margin-left: 11px; 
+        }
+         &__bloc--heart 
+        {
+            font-weight:lighter; 
+            display: flex;
+            justify-content: center;
+            margin-top: -21%;
+            margin-left: 75%;
+            font-size: 35px;
+        }
+}
 

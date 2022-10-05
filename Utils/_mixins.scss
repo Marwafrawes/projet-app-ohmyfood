@@ -54,14 +54,14 @@
 @mixin button-modif {
    
     margin-left: 32px ;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
     border-radius: 30px;
-    height: 60px;
     cursor: pointer;
     width: 85%;
     height: 75PX;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
     background-color:  #f6f6f6;
+    margin-top: -10px;
 }
 @mixin icone-modif {
     border: $couleurPrimaire solid 3px;
@@ -81,4 +81,17 @@
 @mixin btn--modifier {
     background-image: linear-gradient(#FF79DA, #9356DC);
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    
+}
+@mixin icone-modif1 {
+    font-size: 18px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #0000005c;
+   
+}
+@mixin modif-text {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
