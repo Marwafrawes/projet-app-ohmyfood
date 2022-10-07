@@ -9,11 +9,17 @@
     font-family: 'Roboto', sans-serif;
 }
 
+a 
+{
+    text-decoration: none;
+}
 
 
 @import "./Utils/variables";
 @import "./Utils/mixins";
 
+
+/*Page d'accueil*/ 
 
 .headerPageAccueil /*parent*/ 
 {
@@ -210,7 +216,7 @@ button:hover
         {
         
             font-weight: inherit;
-            font-size: 20px;
+            font-size: 15px;
             margin-top: -10px;
             margin-left: 11px; 
         }
@@ -239,12 +245,13 @@ button:hover
           
             display: flex;
             justify-content: center;
-            margin-top: -21%;
+            margin-top: -17%;
             margin-left: 85%;
             font-size: 35px;
             cursor: pointer;
             animation: heart 1s ease;
-            background-image: linear-gradient($couleurPrimaire, $couleurSecondaire);
+            background-image: linear-gradient(  $couleurPrimaire,
+            $couleurSecondaire);
             width:fit-content;
         }
         &__heart--icone
@@ -262,5 +269,46 @@ button:hover
   }
 
 
-/*    background-image: linear-gradient(  $couleurPrimaire,
-            $couleurSecondaire);*/ 
+/*  Footer*/ 
+.FooterPageAccueil
+{ 
+    @include border-main();
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 20px;
+    &__logo
+    {
+        width: 50%;
+        
+    }
+        &__logo--textModif
+        {
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 15px;
+        }
+
+    &__text
+    {
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        flex-direction:row;
+        margin-bottom: 5px;
+      
+
+        
+    }
+        &__text--icon-4
+        {
+            margin-right: 10px;
+
+        }
+}
+
+
+/*page menu 1 Menu - A╠Ç la franc╠ºaise*/ 
+
+
+

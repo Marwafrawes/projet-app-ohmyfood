@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -8,8 +9,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*les variables */
 /*les mixins */
+/*Page d'accueil*/
 .headerPageAccueil {
   border: 5px solid red;
   display: flex;
@@ -204,7 +210,7 @@ button:hover {
 }
 .main-restaurants__bloc--text2Image1 {
   font-weight: inherit;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: -10px;
   margin-left: 11px;
 }
@@ -227,7 +233,7 @@ button:hover {
 .main-restaurants__heart {
   display: flex;
   justify-content: center;
-  margin-top: -21%;
+  margin-top: -17%;
   margin-left: 85%;
   font-size: 35px;
   cursor: pointer;
@@ -265,5 +271,31 @@ button:hover {
     transform: scale(1);
   }
 }
-/*    background-image: linear-gradient(  $couleurPrimaire,
-            $couleurSecondaire);*//*# sourceMappingURL=phone.css.map */
+/*  Footer*/
+.FooterPageAccueil {
+  border: 5px solid red;
+  background-color: rgba(0, 0, 0, 0.747);
+  padding: 20px;
+}
+.FooterPageAccueil__logo {
+  width: 50%;
+}
+.FooterPageAccueil__logo--textModif {
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 15px;
+}
+.FooterPageAccueil__text {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.FooterPageAccueil__text--icon-4 {
+  margin-right: 10px;
+}
+
+/*page menu 1 Menu - A╠Ç la franc╠ºaise*//*# sourceMappingURL=phone.css.map */
