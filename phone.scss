@@ -141,7 +141,6 @@
       {
         @include button-modif;
         @include mobile-only;
-       
         
       }
       &__btn--icone-modif
@@ -149,11 +148,13 @@
        @include icone-modif;
       }
 
+
        &__btn--icone-modif1
 
       {
         @include icone-modif1;      
      }
+
         &__btn--modif-text
         {
          @include modif-text;
@@ -163,6 +164,12 @@
 button:hover
 {
     background-color: $colourHoverBtn;
+    
+}
+.main-fonction__btn--modif:hover > .main-fonction__btn--modif-text  > .main-fonction__btn--icone-modif1 
+
+{
+    color: blueviolet;
 }
 
 
@@ -207,14 +214,53 @@ button:hover
             margin-top: -10px;
             margin-left: 11px; 
         }
-         &__bloc--heart 
+    
+        &__bloc--cadreNouveau
         {
-            font-weight:lighter; 
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            width: 25%;
+            height: 5%;
+            background-color: #99E2D0;
+            position: absolute;
+            margin-top: 17px;
+            margin-left: 64%;
+
+        }
+        &__bloc--text3Image1
+        {
+            font-size: 17px;
+            font-weight: bold;
+            color: #008563e3;
+        }
+        &__heart 
+        {
+          
             display: flex;
             justify-content: center;
             margin-top: -21%;
-            margin-left: 75%;
+            margin-left: 85%;
             font-size: 35px;
+            cursor: pointer;
+            animation: heart 1s ease;
+            background-image: linear-gradient($couleurPrimaire, $couleurSecondaire);
+            width:fit-content;
         }
+        &__heart--icone
+        {
+            font-weight: lighter;
+
+        }
+       
 }
 
+@keyframes heart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+
+
+/*    background-image: linear-gradient(  $couleurPrimaire,
+            $couleurSecondaire);*/ 
