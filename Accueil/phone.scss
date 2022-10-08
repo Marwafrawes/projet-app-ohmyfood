@@ -33,28 +33,25 @@ a
         @include flex-center();
         
        
-        &--modifierImg /*petit-enfant*/ 
+        &--modifierLogoAccueil /*petit-enfant--LOGO*/ 
         {
-            width: 60%;
-            padding: 15px; 
+            @include modifierLogoAccueil;
         }
     }
-    .headerPageAccueil__localisation /*enfant 2*/ 
+    .headerPageAccueil__localisation /*enfant 2--LOCALISATION*/ 
     {
         @include flex-direction-row();
         @include flex-center();
-        
-        padding: 18px; 
-        background-color: $backgroundColorPrimaire;
+        @include localisation;
         
         &__icone
         {
             size: 10px;
            
         }
-        &__location-text
+        &__localisation-text
            {
-            margin-left: 18px;
+            margin-left: 18px;  /*le mixin ne fonctionne pas */ 
             font-size: 18px;
            }
         &__modif
@@ -89,7 +86,7 @@ a
         {
             margin: 0px;
             @include flex-center();
-            font-weight: bold;
+            font-weight: $font-weight;
             font-size: 27px;
             line-height: 15px;
             margin-top: 15px;
@@ -175,7 +172,7 @@ button:hover
 .main-fonction__btn--modif:hover > .main-fonction__btn--modif-text  > .main-fonction__btn--icone-modif1 
 
 {
-    color: blueviolet;
+    color: $couleurPrimaire;
 }
 
 
@@ -190,29 +187,20 @@ button:hover
     }
     &__bloc-img
     {
-        width: 95%;
-        border-radius: 20px;
-        margin: 10px;
-        background-color: white;
-        height: 260px;
+       @include bloc-img-restaurant;
     }
 
-        &__bloc-img--image1
+        &__bloc-img--restaurant-modif
             {
-                width: 100%;
-                object-fit: cover;
-                height: 65%;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px; 
+                @include image-restaurant-specif; 
+                @include border-radius-img;
         }
-        &__bloc--text1Image1
+        &__bloc--text1ImageRestaurant
         {
-         font-weight: bold;
-         font-size: 20px;
-         margin-left: 9px;
+         @include text1ImageRestaurant;
          
         }
-        &__bloc--text2Image1
+        &__bloc--text2ImageRestaurant
         {
         
             font-weight: inherit;
@@ -223,28 +211,26 @@ button:hover
     
         &__bloc--cadreNouveau
         {
-            justify-content: center;
-            display: flex;
-            align-items: center;
+           @include flex-center;
+           align-items: center;
             width: 25%;
             height: 5%;
-            background-color: #99E2D0;
+            background-color: $couleurTertiaire;
             position: absolute;
             margin-top: 17px;
             margin-left: 64%;
 
         }
-        &__bloc--text3Image1
+        &__bloc--text-nouveau-restaurant
         {
             font-size: 17px;
-            font-weight: bold;
-            color: #008563e3;
+            font-weight: $font-weight;
+            color: $couleurTertiaire1;
         }
         &__heart 
         {
           
-            display: flex;
-            justify-content: center;
+           @include flex-center;
             margin-top: -17%;
             margin-left: 85%;
             font-size: 35px;
@@ -283,7 +269,7 @@ button:hover
         &__logo--textModif
         {
             color: white;
-            font-weight: bold;
+            font-weight: $font-weight;
             font-style: italic;
             font-size: 15px;
         }
@@ -292,7 +278,7 @@ button:hover
     {
         color: white;
         font-size: 15px;
-        font-weight: bold;
+        font-weight: $font-weight;
         display: flex;
         flex-direction:row;
         margin-bottom: 5px;

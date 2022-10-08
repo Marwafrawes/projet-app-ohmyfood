@@ -21,7 +21,6 @@
 @mixin flex-center {
     display: flex;
     justify-content: center;
-  
 }
 
 @mixin modifierLogoAccueil {
@@ -109,3 +108,25 @@
     font-weight: bold;
 }
 
+@mixin border-radius-img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+}
+@mixin bloc-img-restaurant {
+    width: 95%;
+    border-radius: $border-radius;
+    margin: 10px;
+    background-color: $backgroundColor-white;
+    height: 260px;
+    margin-top: 20px;
+}
+@mixin image-restaurant-specif {
+    width: 100%;
+    object-fit: cover;
+    height: 65%;
+}
+@mixin text1ImageRestaurant {
+    font-weight: $font-weight;
+         font-size: 20px;
+         margin-left: 9px;
+}

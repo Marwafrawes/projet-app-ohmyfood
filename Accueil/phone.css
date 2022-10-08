@@ -26,7 +26,7 @@ a {
   display: flex;
   justify-content: center;
 }
-.headerPageAccueil__logo--modifierImg {
+.headerPageAccueil__logo--modifierLogoAccueil {
   width: 60%;
   padding: 15px;
 }
@@ -36,13 +36,13 @@ a {
   display: flex;
   justify-content: center;
   padding: 18px;
-  background-color: rgba(224, 224, 224, 0.6666666667);
+  background-color: rgba(224, 224, 224, 0.94);
 }
 .headerPageAccueil .headerPageAccueil__localisation__icone {
   size: 10px;
 }
-.headerPageAccueil .headerPageAccueil__localisation__location-text {
-  margin-left: 18px;
+.headerPageAccueil .headerPageAccueil__localisation__localisation-text {
+  margin-left: 18px; /*le mixin ne fonctionne pas */
   font-size: 18px;
 }
 .headerPageAccueil .headerPageAccueil__localisation__modif {
@@ -175,12 +175,12 @@ button:hover {
 }
 
 .main-fonction__btn--modif:hover > .main-fonction__btn--modif-text > .main-fonction__btn--icone-modif1 {
-  color: blueviolet;
+  color: #9356DC;
 }
 
 /*main 3 */
 .main-restaurants {
-  background-color: rgba(224, 224, 224, 0.6666666667);
+  background-color: rgba(224, 224, 224, 0.94);
   border: 5px solid red;
 }
 .main-restaurants__texte {
@@ -194,8 +194,9 @@ button:hover {
   margin: 10px;
   background-color: white;
   height: 260px;
+  margin-top: 20px;
 }
-.main-restaurants__bloc-img--image1 {
+.main-restaurants__bloc-img--restaurant-modif {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -203,20 +204,20 @@ button:hover {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.main-restaurants__bloc--text1Image1 {
+.main-restaurants__bloc--text1ImageRestaurant {
   font-weight: bold;
   font-size: 20px;
   margin-left: 9px;
 }
-.main-restaurants__bloc--text2Image1 {
+.main-restaurants__bloc--text2ImageRestaurant {
   font-weight: inherit;
   font-size: 15px;
   margin-top: -10px;
   margin-left: 11px;
 }
 .main-restaurants__bloc--cadreNouveau {
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 25%;
   height: 5%;
@@ -225,7 +226,7 @@ button:hover {
   margin-top: 17px;
   margin-left: 64%;
 }
-.main-restaurants__bloc--text3Image1 {
+.main-restaurants__bloc--text-nouveau-restaurant {
   font-size: 17px;
   font-weight: bold;
   color: rgba(0, 133, 99, 0.8901960784);
