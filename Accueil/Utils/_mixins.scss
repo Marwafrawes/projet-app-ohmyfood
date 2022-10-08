@@ -130,3 +130,53 @@
          font-size: 20px;
          margin-left: 9px;
 }
+@mixin text2ImageRestaurant {
+    font-weight: inherit;
+    font-size: 15px;
+    margin-top: -10px;
+    margin-left: 11px; 
+}
+@mixin cadreNouveau {
+    align-items: center;
+    width: 25%;
+    height: 5%;
+    background-color: $couleurTertiaire;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 64%;
+}
+@mixin text-nouveau-restaurant {
+    font-size: 17px;
+    font-weight: $font-weight;
+    color: $couleurTertiaire1;
+}
+@mixin heart {
+    margin-top: -17%;
+    margin-left: 85%;
+    font-size: 35px;
+    cursor: pointer;
+    animation: heart 1s ease;
+    background-image: linear-gradient(  $couleurPrimaire,
+    $couleurSecondaire);
+    width:fit-content;
+}
+
+/*Footer*/
+@mixin FooterPageAccueil {
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 20px;
+}
+@mixin textLogoFooter {
+    color: $backgroundColor-white;
+    font-weight: $font-weight;
+    font-style: italic;
+    font-size: 15px;
+}
+@mixin textfootermodif {
+    color: $backgroundColor-white;
+    font-size: 15px;
+    font-weight: $font-weight;
+    display: flex;
+    flex-direction:row;
+    margin-bottom: 5px;
+}

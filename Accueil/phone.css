@@ -15,6 +15,29 @@ a {
 
 /*les variables */
 /*les mixins */
+/*Footer*/
+@-webkit-keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*Page d'accueil*/
 .headerPageAccueil {
   border: 5px solid red;
@@ -249,29 +272,6 @@ button:hover {
   font-weight: lighter;
 }
 
-@-webkit-keyframes heart {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes heart {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /*  Footer*/
 .FooterPageAccueil {
   border: 5px solid red;
@@ -281,13 +281,13 @@ button:hover {
 .FooterPageAccueil__logo {
   width: 50%;
 }
-.FooterPageAccueil__logo--textModif {
+.FooterPageAccueil__logo--textModifLogofooter {
   color: white;
   font-weight: bold;
   font-style: italic;
   font-size: 15px;
 }
-.FooterPageAccueil__text {
+.FooterPageAccueil__textFooter {
   color: white;
   font-size: 15px;
   font-weight: bold;

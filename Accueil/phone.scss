@@ -17,6 +17,7 @@ a
 
 @import "./Utils/variables";
 @import "./Utils/mixins";
+@import "./Utils/animation";
 
 
 /*Page d'accueil*/ 
@@ -203,42 +204,24 @@ button:hover
         &__bloc--text2ImageRestaurant
         {
         
-            font-weight: inherit;
-            font-size: 15px;
-            margin-top: -10px;
-            margin-left: 11px; 
+           @include text2ImageRestaurant;
         }
     
         &__bloc--cadreNouveau
         {
            @include flex-center;
-           align-items: center;
-            width: 25%;
-            height: 5%;
-            background-color: $couleurTertiaire;
-            position: absolute;
-            margin-top: 17px;
-            margin-left: 64%;
+           @include cadreNouveau;
 
         }
         &__bloc--text-nouveau-restaurant
         {
-            font-size: 17px;
-            font-weight: $font-weight;
-            color: $couleurTertiaire1;
+            @include text-nouveau-restaurant;
         }
         &__heart 
         {
           
            @include flex-center;
-            margin-top: -17%;
-            margin-left: 85%;
-            font-size: 35px;
-            cursor: pointer;
-            animation: heart 1s ease;
-            background-image: linear-gradient(  $couleurPrimaire,
-            $couleurSecondaire);
-            width:fit-content;
+             @include heart;
         }
         &__heart--icone
         {
@@ -248,40 +231,25 @@ button:hover
        
 }
 
-@keyframes heart {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-    100% { transform: scale(1); }
-  }
-
 
 /*  Footer*/ 
 .FooterPageAccueil
 { 
     @include border-main();
-    background-color: rgba(0, 0, 0, 0.747);
-    padding: 20px;
+   @include FooterPageAccueil;
     &__logo
     {
         width: 50%;
         
     }
-        &__logo--textModif
+        &__logo--textModifLogofooter
         {
-            color: white;
-            font-weight: $font-weight;
-            font-style: italic;
-            font-size: 15px;
+            @include textLogoFooter;
         }
 
-    &__text
+    &__textFooter
     {
-        color: white;
-        font-size: 15px;
-        font-weight: $font-weight;
-        display: flex;
-        flex-direction:row;
-        margin-bottom: 5px;
+       @include textfootermodif; 
       
 
         
