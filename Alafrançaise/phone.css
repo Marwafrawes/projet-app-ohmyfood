@@ -45,13 +45,13 @@ a {
   width: 100%;
 }
 
-.mainCarteRestaurant {
+.mainCarteRestaurantEntrees {
   border: 5px solid red;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   background-color: #F2F2F2;
 }
-.mainCarteRestaurant__blocText {
+.mainCarteRestaurantEntrees__blocText {
   display: flex;
   flex-direction: row;
   display: flex;
@@ -59,27 +59,104 @@ a {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
-.mainCarteRestaurant__blocText--modif {
+.mainCarteRestaurantEntrees__blocText--modif {
   font-size: 28px;
   font-style: italic;
   font-family: "Roboto", sans-serif;
 }
-.mainCarteRestaurant__blocText--heart {
+.mainCarteRestaurantEntrees__blocText--heart {
   margin-left: 50%;
   margin-top: 5%;
   font-weight: lighter;
   font-size: 23px;
 }
-.mainCarteRestaurant__text-Entrées {
+.mainCarteRestaurantEntrees__text-Entrées {
   text-transform: uppercase;
   margin-left: 20px;
-  border-bottom: solid #99E2D0 3px;
-  width: 39px;
 }
-.mainCarteRestaurant__text-Entrées--modif {
-  color: aqua;
+.mainCarteRestaurantEntrees__text-Entrées--modif {
+  font-size: 15px;
+  margin-bottom: 5px;
+  opacity: 0.6;
+}
+.mainCarteRestaurantEntrees__text-Entrées--barre {
+  border: solid #99E2D0 2px;
+  width: 40px;
+  margin-bottom: 15px;
+  margin-left: 18px;
+}
+.mainCarteRestaurantEntrees__menuList {
+  width: 95%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  line-height: 0;
+  border: solid 2px white;
+  border-radius: 15px;
+  height: 60px;
+  background-color: white;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px rgb(226, 226, 226);
+}
+.mainCarteRestaurantEntrees__menuList--textModif1 {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.mainCarteRestaurantEntrees__menuList--textModif2 {
+  font-size: 13px;
+  margin-left: 10px;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+.mainCarteRestaurantEntrees__menuList--money {
+  margin-right: 27px;
+  margin-top: -17px;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.mainCarteRestaurantEntrees__barreAnimation {
+  width: 12%;
+  height: 60px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  margin-left: 84%;
+  box-shadow: 3px 3px rgb(226, 226, 226);
+  cursor: pointer;
+}
+.mainCarteRestaurantEntrees__barreAnimation:hover {
+  transition: all 600ms ease-in-out;
+}
+.mainCarteRestaurantEntrees__barreAnimation--cercleCheck {
+  color: white;
+  font-size: 18px;
 }
 
+@-webkit-keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 /*  Footer
 .FooterPageAccueil
 { 
