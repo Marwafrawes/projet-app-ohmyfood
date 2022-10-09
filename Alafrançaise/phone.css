@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -10,4 +11,101 @@
 
 a {
   text-decoration: none;
-}/*# sourceMappingURL=phone.css.map */
+}
+
+/*les variables */
+/*les mixins */
+/*Footer*/
+/*carte à la française */
+/*header*/
+.headerPageAccueil {
+  border: 5px solid red;
+}
+.headerPageAccueil__logo {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  padding: 15px;
+  justify-content: space-between;
+}
+.headerPageAccueil__logo--modifierLogoAccueil {
+  width: 60%;
+  margin-right: -39px;
+}
+.headerPageAccueil__logo--arrowicone {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+/*main*/
+.mainImgRestaurantAlafrancaise {
+  border: 5px solid red;
+}
+.mainImgRestaurantAlafrancaise__img-restaurant {
+  width: 100%;
+}
+
+.mainCarteRestaurant {
+  border: 5px solid red;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #F2F2F2;
+}
+.mainCarteRestaurant__blocText {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.mainCarteRestaurant__blocText--modif {
+  font-size: 28px;
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+.mainCarteRestaurant__blocText--heart {
+  margin-left: 50%;
+  margin-top: 5%;
+  font-weight: lighter;
+  font-size: 23px;
+}
+.mainCarteRestaurant__text-Entrées {
+  text-transform: uppercase;
+  margin-left: 20px;
+  border-bottom: solid #99E2D0 3px;
+  width: 39px;
+}
+.mainCarteRestaurant__text-Entrées--modif {
+  color: aqua;
+}
+
+/*  Footer
+.FooterPageAccueil
+{ 
+    @include border-main();
+   @include FooterPageAccueil;
+    &__logo
+    {
+        width: 50%;
+
+    }
+        &__logo--textModifLogofooter
+        {
+            @include textLogoFooter;
+        }
+
+    &__textFooter
+    {
+       @include textfootermodif; 
+
+
+
+    }
+        &__text--icon-4
+        {
+            margin-right: 10px;
+
+        }
+}
+*//*# sourceMappingURL=phone.css.map */

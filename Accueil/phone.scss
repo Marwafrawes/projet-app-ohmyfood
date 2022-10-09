@@ -45,20 +45,21 @@ a
         @include flex-center();
         @include localisation;
         
-        &__icone
+        &--icone
         {
             size: 10px;
            
         }
-        &__localisation-text
+        &--modif
+        {
+            font-size: 20px;
+        }
+        &--text
            {
             margin-left: 18px;  /*le mixin ne fonctionne pas */ 
             font-size: 18px;
            }
-        &__modif
-            {
-                font-size: 20px;
-            }
+       
     }
         
   
@@ -108,8 +109,8 @@ a
     {
         @include flex-center();
     
-    }
-        &__btn--modifier /*petit enfant*/ 
+    
+        &--modifier /*petit enfant*/ 
         {
            
             @include border-radius-btn();
@@ -117,11 +118,11 @@ a
             @include btn--modifier;
           
         }
-        &__btn--text-decoration
+        &--text-decoration
         {
            @include text-btn-recherche;
         }
-
+    }
 }
 
 .main-fonction

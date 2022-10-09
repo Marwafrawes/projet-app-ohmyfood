@@ -14,3 +14,129 @@ a
 }
 @import "./Utils/variables";
 @import "./Utils/mixins";
+
+
+/*header*/ 
+
+
+.headerPageAccueil
+{
+    @include border-main;
+   
+    &__logo
+    {
+        @include flex-direction-row; 
+        @include modifierLogoAccueil;
+        justify-content: space-between;
+    }
+        &__logo--modifierLogoAccueil
+        {
+            width: 60%;
+            margin-right: -39px;
+        }
+        &__logo--arrowicone
+        {
+            margin-top:5px ;
+            margin-left: 10px;
+        }
+}
+
+/*main*/ 
+
+.mainImgRestaurantAlafrancaise
+{
+    @include border-main;
+    &__img-restaurant
+    {
+        width: 100%;
+    }
+}
+
+.mainCarteRestaurant
+{
+    @include border-main;
+    @include border-radius-top-leftRight;
+    background-color: $backgroundColorSecondaire;
+ 
+    &__blocText
+    {
+    @include flex-direction-row; 
+    @include flex-center;
+    @include border-radius-top-leftRight;
+    }
+    &__blocText--modif
+    {
+        font-size: 28px;
+        font-style: italic;
+        font-family: 'Roboto', sans-serif;
+       
+    }
+    &__blocText--heart
+            {
+                margin-left: 50%;
+                margin-top: 5%;
+                font-weight: lighter;
+                font-size: 23px;
+            }
+
+    &__text-Entrées
+    {
+        text-transform: uppercase;
+        margin-left: 20px;
+        border-bottom: solid #99E2D0 3px;
+        width: 39px;
+
+        &--modif
+        {
+            color: aqua;
+        }
+       
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Footer
+.FooterPageAccueil
+{ 
+    @include border-main();
+   @include FooterPageAccueil;
+    &__logo
+    {
+        width: 50%;
+        
+    }
+        &__logo--textModifLogofooter
+        {
+            @include textLogoFooter;
+        }
+
+    &__textFooter
+    {
+       @include textfootermodif; 
+      
+
+        
+    }
+        &__text--icon-4
+        {
+            margin-right: 10px;
+
+        }
+}
+*/ 

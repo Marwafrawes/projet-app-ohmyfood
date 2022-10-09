@@ -61,15 +61,15 @@ a {
   padding: 18px;
   background-color: rgba(224, 224, 224, 0.94);
 }
-.headerPageAccueil .headerPageAccueil__localisation__icone {
+.headerPageAccueil .headerPageAccueil__localisation--icone {
   size: 10px;
 }
-.headerPageAccueil .headerPageAccueil__localisation__localisation-text {
+.headerPageAccueil .headerPageAccueil__localisation--modif {
+  font-size: 20px;
+}
+.headerPageAccueil .headerPageAccueil__localisation--text {
   margin-left: 18px; /*le mixin ne fonctionne pas */
   font-size: 18px;
-}
-.headerPageAccueil .headerPageAccueil__localisation__modif {
-  font-size: 20px;
 }
 
 .main-recherche {
