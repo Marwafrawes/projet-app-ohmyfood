@@ -1,4 +1,3 @@
-
 *,
 ::after,
 ::before {
@@ -9,8 +8,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-a 
-{
+a {
     text-decoration: none;
 }
 
@@ -20,72 +18,86 @@ a
 @import "./Utils/animation";
 
 
-/*Page d'accueil*/ 
+/*Page d'accueil*/
 
-.headerPageAccueil /*parent*/ 
-{
-   @include border-main();
-   @include flex-direction-colum();
-    width: 100%;
-  
- 
-    &__logo /*enfant 1 */ 
+.headerPageAccueil
+
+/*parent*/
     {
-        @include flex-center();
-        
-       
-        &--modifierLogoAccueil /*petit-enfant--LOGO*/ 
+    @include border-main();
+    @include flex-direction-colum();
+    width: 100%;
+
+
+    &__logo
+
+    /*enfant 1 */
         {
+        @include flex-center();
+
+
+        &--modifierLogoAccueil
+
+        /*petit-enfant--LOGO*/
+            {
             @include modifierLogoAccueil;
         }
     }
-    .headerPageAccueil__localisation /*enfant 2--LOCALISATION*/ 
-    {
+
+    .headerPageAccueil__localisation
+
+    /*enfant 2--LOCALISATION*/
+        {
         @include flex-direction-row();
         @include flex-center();
         @include localisation;
-        
-        &--icone
-        {
+
+        &--icone {
             size: 10px;
-           
+
         }
-        &--modif
-        {
+
+        &--modif {
             font-size: 20px;
         }
-        &--text
-           {
-            margin-left: 18px;  /*le mixin ne fonctionne pas */ 
+
+        &--text {
+            margin-left: 18px;
+            /*le mixin ne fonctionne pas */
             font-size: 18px;
-           }
-       
+        }
+
     }
-        
-  
+
+
 }
 
 
-.main-recherche /*parent*/ 
-{
-    @include border-main(); 
+.main-recherche
+
+/*parent*/
+    {
+    @include border-main();
     background-color: $backgroundColorSecondaire;
     padding: 23px;
-    
-    &__menuList /*enfant1*/ 
-    {
-       @include flex-center();
-     
-        &--retrouveListe /*petit-enfant*/ 
+
+    &__menuList
+
+    /*enfant1*/
         {
-           
+        @include flex-center();
+
+        &--retrouveListe
+
+        /*petit-enfant*/
+            {
+
             @include flex-direction-colum();
-            
+
             width: 100%;
         }
 
-        &--modifText
-        {
+        &--modifText {
             margin: 0px;
             @include flex-center();
             font-weight: $font-weight;
@@ -93,8 +105,8 @@ a
             line-height: 15px;
             margin-top: 15px;
         }
-        &--modifText1
-        {
+
+        &--modifText1 {
             margin: 0px;
             @include flex-center();
             font-size: 18px;
@@ -103,167 +115,197 @@ a
             color: #6a6a6a;
         }
     }
-    
 
-    &__btn /*enfant2*/ 
-    {
-        @include flex-center();
-    
-    
-        &--modifier /*petit enfant*/ 
+
+    &__btn
+
+    /*enfant2*/
         {
-           
+        @include flex-center();
+
+
+        &--modifier
+
+        /*petit enfant*/
+            {
+
             @include border-radius-btn();
             @include mobile-only;
             @include btn--modifier;
-          
+
         }
-        &--text-decoration
-        {
-           @include text-btn-recherche;
+
+        &--text-decoration {
+            @include text-btn-recherche;
         }
     }
 }
 
-.main-fonction
-{
+.main-fonction {
     @include border-main();
-  
-    &__texte
-        {
-        @include main-fonction-texte;  
-          
-        padding: 20px;    /*DRY*/ 
+
+    &__texte {
+        @include main-fonction-texte;
+
+        padding: 20px;
+        /*DRY*/
     }
-    &__btn
-    {
+
+    &__btn {
         @include flex-direction-colum;
-        
-        margin-bottom:10%; /*DRY*/ 
-        
-    }
-        &__btn--modif 
-      {
-        @include button-modif;
-        @include mobile-only;
-        
-      }
-      &__btn--icone-modif
-      {
-       @include icone-modif;
-      }
 
-
-       &__btn--icone-modif1
-
-      {
-        @include icone-modif1;      
-     }
-
-        &__btn--modif-text
-        {
-         @include modif-text;
-        }
-}
-
-button:hover
-{
-    background-color: $colourHoverBtn;
+        margin-bottom: 10%;
+        /*DRY*/
+        &--modif {
+            @include button-modif;
+            @include mobile-only;
     
-}
-.main-fonction__btn--modif:hover > .main-fonction__btn--modif-text  > .main-fonction__btn--icone-modif1 
+        }
+        &--modif-text {
+            @include modif-text;
+        }
+        &--icone-modif1 {
+            @include icone-modif1;
+        }
+        
+        &--icone-modif {
+            @include icone-modif;
+        }
 
-{
+    }
+   
+}
+
+button:hover {
+    background-color: $colourHoverBtn;
+
+}
+
+.main-fonction__btn--modif:hover>.main-fonction__btn--modif-text>.main-fonction__btn--icone-modif1 {
     color: $couleurPrimaire;
 }
 
 
-/*main 3 */ 
-.main-restaurants
-{
-    background-color: $backgroundColorPrimaire; 
-    @include border-main; 
-    &__texte
-    {
-        @include main-fonction-texte; 
+/*main 3 */
+.main-restaurants {
+    background-color: $backgroundColorSecondaire;
+    @include border-main;
+
+    &__texte {
+        @include main-fonction-texte;
     }
-    &__bloc-img
-    {
-       @include bloc-img-restaurant;
+    &__heart {
+        float: right;
+        margin: inherit;
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        background-color: black;
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &::before {
+            opacity: 0;
+            transition: 0.5s;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(0deg, $couleurPrimaire 0%, $couleurSecondaire 100%);
+        }
     }
 
-        &__bloc-img--restaurant-modif
-            {
-                @include image-restaurant-specif; 
-                @include border-radius-img;
+    &__like {
+        transition-duration: .25s;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        mix-blend-mode: lighten;
+    }
+
+    &__heart:hover {
+        .menu__like {
+            &--noBg {
+                opacity: 0;
+            }
         }
-        &__bloc--text1ImageRestaurant
-        {
-         @include text1ImageRestaurant;
-         
-        }
-        &__bloc--text2ImageRestaurant
-        {
-        
-           @include text2ImageRestaurant;
-        }
+    }
+
+
+    &__bloc-img {
+        @include bloc-img-restaurant;
+   
+        &--cadreNouveau {
+            @include flex-center;
+            @include cadreNouveau;
     
-        &__bloc--cadreNouveau
-        {
-           @include flex-center;
-           @include cadreNouveau;
-
         }
-        &__bloc--text-nouveau-restaurant
-        {
+        &--text-nouveau-restaurant {
             @include text-nouveau-restaurant;
         }
-        &__heart 
-        {
-          
-           @include flex-center;
-             @include heart;
+    
+        &--restaurant-modif {
+            @include image-restaurant-specif;
+            @include border-radius-img;
         }
-        &__heart--icone
-        {
-            font-weight: lighter;
+        &--text1ImageRestaurant {
+            @include text1ImageRestaurant;
+            margin-bottom: 4px;
+        }
+        &--text2ImageRestaurant {
 
+            @include text2ImageRestaurant;
         }
        
-}
-
-
-/*  Footer*/ 
-.FooterPageAccueil
-{ 
-    @include border-main();
-   @include FooterPageAccueil;
-    &__logo
-    {
-        width: 50%;
-        
+    
     }
-        &__logo--textModifLogofooter
-        {
+
+}
+/*test
+
+*/
+
+/*  Footer*/
+.FooterPageAccueil {
+    @include border-main();
+    @include FooterPageAccueil;
+
+    &__logo {
+        width: 50%;
+        &--textModifLogofooter {
             @include textLogoFooter;
         }
-
-    &__textFooter
-    {
-       @include textfootermodif; 
-      
-
-        
+    
     }
-        &__text--icon-4
-        {
-            margin-right: 10px;
 
+ 
+    &__textFooter {
+        @include textfootermodif;
+        &--icon-4 {
+            margin-right: 10px;
+    
         }
+    }
+
+
 }
 
 
-/*page menu 1 Menu - A╠Ç la franc╠ºaise*/ 
-
-
-
+/*page menu 1 Menu - A╠Ç la franc╠ºaise*/
