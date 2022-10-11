@@ -75,6 +75,19 @@
     background-color:  #f6f6f6;
     margin-top: -10px;
 }
+
+@mixin button-modif {
+   
+    margin-left: 32px ;
+    margin-bottom: 7%;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 85%;
+    height: 75PX;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    background-color:  #f6f6f6;
+    margin-top: -10px;
+}
 @mixin icone-modif {
     border: $couleurPrimaire solid 3px;
     height: 25px;

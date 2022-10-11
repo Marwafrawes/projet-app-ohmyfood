@@ -13,6 +13,12 @@ a {
   text-decoration: none;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+  background: #737373;
+}
+
 /*les variables */
 /*les mixins */
 /*Footer*/
@@ -38,6 +44,78 @@ a {
     transform: scale(1);
   }
 }
+/*loader 
+.ring
+  {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+     &__ring::before
+     {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      box-shadow: 0 0 rgba(255,255,255,.3);
+     }
+
+  }
+  &__test
+  {
+     background-color: rgb(0, 0, 0);
+     animation: test 2s linear infinite;
+     position: relative;
+  }
+
+span
+{
+  color: #737373;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  line-height: 200px;
+  animation:text 2s ease-in-out infinite;
+}
+@keyframes ring {
+  0%{
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #9356DC;
+  }
+  50%{
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #FF79DA;
+  }
+ 100%{
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #99E2D0;
+  }
+
+}
+
+@keyframes text {
+  0%{
+    color:#99E2D0;
+  }
+  50%{
+    color:#FF79DA;
+  }
+  50%{
+    color:#9356DC ;
+  }
+}
+@keyframes test {
+    0%{
+      opacity: 0;
+    }
+  50%{
+      opacity: 1 ;
+    }
+  }
+*/
 /*Page d'accueil*/
 .headerPageAccueil {
   border: 5px solid red;
@@ -304,9 +382,6 @@ button:hover {
   margin-left: 11px;
 }
 
-/*test
-
-*/
 /*  Footer*/
 .FooterPageAccueil {
   border: 5px solid red;
