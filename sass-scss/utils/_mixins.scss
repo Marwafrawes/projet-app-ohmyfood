@@ -1,0 +1,231 @@
+
+/*les mixins */ 
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+      
+        transition: all 600ms ease-in-out;
+        &:hover
+        {
+            transform: scale(1.15);
+        
+        }
+  }
+
+}
+
+
+    
+@mixin border-main {
+    border: 5px solid red;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin modifierLogoAccueil {
+    width: 60%;
+    padding: 15px;
+}
+@mixin localisation  {
+     
+        padding: 18px; 
+        background-color: $backgroundColorPrimaire;
+}
+@mixin flex-direction-colum {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-direction-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin border-radius-btn {
+    border-radius: 30px;
+    width: 75%;
+    height: 63px;
+    opacity: 1; 
+    margin-top: 20px;/*DRY*/ 
+    margin-bottom: 50px;
+    cursor: pointer;
+  
+}
+@mixin text-btn-recherche {
+    text-decoration: none;
+    color: white; 
+    font-size: 18px
+}
+
+@mixin main-fonction-texte {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px;
+}
+@mixin button-modif {
+   
+    margin-left: 32px ;
+    margin-bottom: 7%;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 85%;
+    height: 75PX;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    background-color:  #f6f6f6;
+    margin-top: -10px;
+}
+@mixin icone-modif {
+    border: $couleurPrimaire solid 3px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    background-color: $couleurPrimaire;
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -21px;
+    margin-left: -15px;
+}
+@mixin btn--modifier {
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    
+}
+@mixin icone-modif1 {
+    font-size: 18px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #0000005c;
+   
+}
+@mixin modif-text {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+@mixin border-radius-img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+}
+@mixin bloc-img-restaurant {
+    width: 95%;
+    border-radius: $border-radius;
+    margin: 10px;
+    background-color: $backgroundColor-white;
+    height: 260px;
+    margin-top: 20px;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+}
+@mixin image-restaurant-specif {
+    width: 100%;
+    object-fit: cover;
+    height: 65%;
+}
+@mixin text1ImageRestaurant {
+    font-weight: $font-weight;
+         font-size: 20px;
+         margin-left: 9px;
+}
+@mixin text2ImageRestaurant {
+    font-weight: inherit;
+    font-size: 15px;
+    margin-top: -10px;
+    margin-left: 11px; 
+}
+@mixin cadreNouveau {
+    align-items: center;
+    width: 25%;
+    height: 5%;
+    background-color: $couleurTertiaire;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 64%;
+}
+@mixin text-nouveau-restaurant {
+    font-size: 17px;
+    font-weight: $font-weight;
+    color: $couleurTertiaire1;
+}
+@mixin heart {
+    margin-top: -17%;
+    margin-left: 85%;
+    font-size: 35px;
+    cursor: pointer;
+    animation: heart 1s ease;
+    width:fit-content;
+    font-weight: 400;
+}
+
+/*Footer*/
+@mixin FooterPageAccueil {
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 20px;
+}
+@mixin textLogoFooter {
+    color: $backgroundColor-white;
+    font-weight: $font-weight;
+    font-style: italic;
+    font-size: 15px;
+}
+@mixin textfootermodif {
+    color: $backgroundColor-white;
+    font-size: 15px;
+    font-weight: $font-weight;
+    display: flex;
+    flex-direction:row;
+    margin-bottom: 5px;
+}
+
+@mixin heart {
+    float: right;
+        margin: inherit;
+        height: 35px;
+        width: 35px;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        background-color: black;
+}
+
+@mixin heart_before {
+    opacity: 0;
+    transition: 0.5s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, $couleurPrimaire 0%, $couleurSecondaire 100%);
+}
+
+@mixin like {
+    transition-duration: .25s;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+}
+/*carte à la française */ 
+
+@mixin border-radius-top-leftRight {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
