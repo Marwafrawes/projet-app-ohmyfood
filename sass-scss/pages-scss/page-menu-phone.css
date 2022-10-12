@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -16,7 +15,7 @@ a {
 /*les variables */
 /*les mixins */
 /*Footer*/
-/*carte à la française */
+/*menus  */
 /*header*/
 .headerPageAccueil {
   border: 5px solid red;
@@ -35,6 +34,7 @@ a {
 .headerPageAccueil__logo--arrowicone {
   margin-top: 5px;
   margin-left: 10px;
+  color: black;
 }
 
 /*main*/

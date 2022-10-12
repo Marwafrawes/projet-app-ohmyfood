@@ -16,7 +16,7 @@ a {
 /*les variables */
 /*les mixins */
 /*Footer*/
-/*carte à la française */
+/*menus  */
 @-webkit-keyframes heart {
   0% {
     transform: scale(1);
@@ -39,9 +39,24 @@ a {
     transform: scale(1);
   }
 }
+@-webkit-keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 /*Page d'accueil*/
 .headerPageAccueil {
-  border: 5px solid red;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -75,7 +90,6 @@ a {
 }
 
 .main-recherche {
-  border: 5px solid red;
   background-color: #F2F2F2;
   padding: 23px;
 }
@@ -135,9 +149,6 @@ a {
   font-size: 18px;
 }
 
-.main-fonction {
-  border: 5px solid red;
-}
 .main-fonction__texte {
   font-size: 25px;
   font-weight: bold;
@@ -208,7 +219,6 @@ button:hover {
 /*main 3 */
 .main-restaurants {
   background-color: #F2F2F2;
-  border: 5px solid red;
 }
 .main-restaurants__texte {
   font-size: 25px;
@@ -316,7 +326,6 @@ button:hover {
 
 /*  Footer*/
 .FooterPageAccueil {
-  border: 5px solid red;
   background-color: rgba(0, 0, 0, 0.747);
   padding: 20px;
 }

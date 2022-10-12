@@ -24,7 +24,7 @@ a {
 
 /*parent*/
     {
-    @include border-main();
+
     @include flex-direction-colum();
     width: 100%;
 
@@ -77,7 +77,7 @@ a {
 
 /*parent*/
     {
-    @include border-main();
+   
     background-color: $backgroundColorSecondaire;
     padding: 23px;
 
@@ -142,7 +142,7 @@ a {
 }
 
 .main-fonction {
-    @include border-main();
+   
 
     &__texte {
         @include main-fonction-texte;
@@ -189,55 +189,25 @@ button:hover {
 /*main 3 */
 .main-restaurants {
     background-color: $backgroundColorSecondaire;
-    @include border-main;
+    
 
     &__texte {
         @include main-fonction-texte;
     }
     &__heart {
-        float: right;
-        margin: inherit;
-        height: 35px;
-        width: 35px;
-        background-color: transparent;
-        border: transparent 0px solid;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        position: relative;
-        background-color: black;
+       @include heart;
 
         &:hover::before {
             opacity: 1;
         }
 
         &::before {
-            opacity: 0;
-            transition: 0.5s;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(0deg, $couleurPrimaire 0%, $couleurSecondaire 100%);
+           @include heart_before;
         }
     }
 
     &__like {
-        transition-duration: .25s;
-        background-color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        mix-blend-mode: lighten;
+       @include like;
     }
 
     &__heart:hover {
@@ -282,7 +252,7 @@ button:hover {
 
 /*  Footer*/
 .FooterPageAccueil {
-    @include border-main();
+ 
     @include FooterPageAccueil;
 
     &__logo {
