@@ -13,38 +13,33 @@ a {
 }
 
 
-@import "./utils/_variables";
-@import "./utils/_mixins";
-@import "./utils/_animation";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/animation";
+@import "./utils/breakpoints";
 
+/*loader*/
 
 /*Page d'accueil*/
 
-.headerPageAccueil
-
-/*parent*/
-    {
-
+.headerPageAccueil {
     @include flex-direction-colum();
+
     width: 100%;
 
-
-    &__logo
-
-    /*enfant 1 */
-        {
+    &__logo {
         @include flex-center();
-
 
         &--modifierLogoAccueil
 
         /*petit-enfant--LOGO*/
             {
             @include modifierLogoAccueil;
+
         }
     }
 
-    .headerPageAccueil__localisation
+    &__localisation
 
     /*enfant 2--LOCALISATION*/
         {
@@ -74,22 +69,16 @@ a {
 
 
 .main-recherche
-
-/*parent*/
     {
-   
+
     background-color: $backgroundColorSecondaire;
     padding: 23px;
 
     &__menuList
-
-    /*enfant1*/
         {
         @include flex-center();
 
         &--retrouveListe
-
-        /*petit-enfant*/
             {
 
             @include flex-direction-colum();
@@ -117,17 +106,11 @@ a {
     }
 
 
-    &__btn
-
-    /*enfant2*/
-        {
+    &__btn {
         @include flex-center();
 
 
-        &--modifier
-
-        /*petit enfant*/
-            {
+        &--modifier {
 
             @include border-radius-btn();
             @include mobile-only;
@@ -142,7 +125,7 @@ a {
 }
 
 .main-fonction {
-   
+
 
     &__texte {
         @include main-fonction-texte;
@@ -155,25 +138,28 @@ a {
         @include flex-direction-colum;
 
         margin-bottom: 10%;
+
         /*DRY*/
         &--modif {
             @include button-modif;
             @include mobile-only;
-    
+
         }
+
         &--modif-text {
             @include modif-text;
         }
+
         &--icone-modif1 {
             @include icone-modif1;
         }
-        
+
         &--icone-modif {
             @include icone-modif;
         }
 
     }
-   
+
 }
 
 button:hover {
@@ -189,25 +175,26 @@ button:hover {
 /*main 3 */
 .main-restaurants {
     background-color: $backgroundColorSecondaire;
-    
+
 
     &__texte {
         @include main-fonction-texte;
     }
+
     &__heart {
-       @include heart;
+        @include heart;
 
         &:hover::before {
             opacity: 1;
         }
 
         &::before {
-           @include heart_before;
+            @include heart_before;
         }
     }
 
     &__like {
-       @include like;
+        @include like;
     }
 
     &__heart:hover {
@@ -222,53 +209,58 @@ button:hover {
     &__bloc-img {
         @include bloc-img-restaurant;
         @include mobile-only;
-   
+
         &--cadreNouveau {
             @include flex-center;
             @include cadreNouveau;
-    
+
         }
+
         &--text-nouveau-restaurant {
             @include text-nouveau-restaurant;
         }
-    
+
         &--restaurant-modif {
             @include image-restaurant-specif;
             @include border-radius-img;
         }
+
         &--text1ImageRestaurant {
             @include text1ImageRestaurant;
             margin-bottom: 4px;
         }
+
         &--text2ImageRestaurant {
 
             @include text2ImageRestaurant;
         }
-       
-    
+
+
     }
 
 }
 
 /*  Footer*/
 .FooterPageAccueil {
- 
+
     @include FooterPageAccueil;
 
     &__logo {
         width: 50%;
+
         &--textModifLogofooter {
             @include textLogoFooter;
         }
-    
+
     }
 
- 
+
     &__textFooter {
         @include textfootermodif;
+
         &--icon-4 {
             margin-right: 10px;
-    
+
         }
     }
 
@@ -276,5 +268,4 @@ button:hover {
 }
 
 
-/*page menu 1 Menu - A╠Ç la franc╠ºaise*/
-
+/*Desktop*/

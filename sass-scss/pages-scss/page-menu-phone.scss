@@ -8,8 +8,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-a 
-{
+a {
     text-decoration: none;
 }
 
@@ -22,77 +21,73 @@ a
 @import "../utils/mixins";
 
 
-/*header*/ 
+/*header*/
 
 
-.headerPageAccueil
-{
+.headerPageAccueil {
     @include border-main;
-   
-    &__logo
-    {
-        @include flex-direction-row; 
+
+    &__logo {
+        @include flex-direction-row;
         @include modifierLogoAccueil;
         justify-content: space-between;
     }
-        &__logo--modifierLogoAccueil
-        {
-            width: 60%;
-            margin-right: -39px;
-        }
-        &__logo--arrowicone
-        {
-            margin-top:5px ;
-            margin-left: 10px;
-            color: black;
-        }
-}
 
-/*main*/ 
+    &__logo--modifierLogoAccueil {
+        width: 60%;
+        margin-right: -39px;
+    }
 
-.mainImgRestaurantAlafrancaise
-{
-    @include border-main;
-    margin-bottom: -15%;
-   
-    &__img-restaurant
-    {
-        width: 100%;
-        height: 264px;
-object-fit: cover;
-      
+    &__logo--arrowicone {
+        margin-top: 5px;
+        margin-left: 10px;
+        color: black;
     }
 }
 
-.mainCarteRestaurant
-{
+/*main*/
+
+.mainImgRestaurantAlafrancaise {
+    @include border-main;
+    margin-bottom: -15%;
+
+    &__img-restaurant {
+        width: 100%;
+        height: 264px;
+        object-fit: cover;
+
+    }
+}
+
+.mainCarteRestaurant {
     @include border-main;
     @include border-radius-top-leftRight;
     @include img_position;
-    &__blocText
-    {
-    @include flex-direction-row; 
-    justify-content: space-around;
-    @include border-radius-top-leftRight;
-    
-        &--modif
-        {
-           @include text_menus ;
+
+    &__blocText {
+        @include flex-direction-row;
+        justify-content: space-around;
+        @include border-radius-top-leftRight;
+
+        &--modif {
+            @include text_menus;
         }
-}
+    }
+
     &__heart {
-     @include heart_menus;
+        @include heart_menus;
+
         &:hover::before {
             opacity: 1;
         }
 
         &::before {
-           @include heart_before;
+            @include heart_before;
         }
     }
 
     &__like {
-       @include like_menus;
+        @include like_menus;
     }
 
     &__heart:hover {
@@ -103,56 +98,67 @@ object-fit: cover;
         }
     }
 
-    &__text
-    {
-      @include text1_menus;
-        &--modif
-        {
+    &__text {
+        @include text1_menus;
+
+        &--modif {
             font-size: 15px;
             margin-bottom: 5px;
             opacity: 0.6;
             margin-top: 40px;
-            
+
         }
-        &--barreVerte
-        {
-           @include barreVerte;
+
+        &--barreVerte {
+            @include barreVerte;
         }
     }
-    &__menuList
-    {
+
+    &__menuList {
         @include menuList;
-        &--textModif1
-        {
-            @include menuList-textModif;
+
+        @keyframes itemAppear {
+            0% {
+                transform: scale(0)
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
-        &--textModif2
-        {
+
+        animation: itemAppear .6s;
+        animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+        animation-fill-mode: both;
+        transform: scale(0);
+
+
+        &--textModif1 {
+            @include menuList-textModif1;
+        }
+
+        &--textModif2 {
             @include menuList-textModif2;
         }
-        &--price
-        {
-         @include price-menus;
+
+        &--price {
+            @include price-menus;
         }
     }
-    &__barreAnimation{
-     @include menus-barreAnimation;
-        &:hover
-        {
-            transition: all 600ms ease-in-out;
+
+    &__barreAnimation {
+        @include menus-barreAnimation;
+
+        &--cercleCheck {
+            color: white;
+            font-size: 18px;
         }
-            &--cercleCheck
-            {
-                color: white;
-                font-size: 18px;
-            }
     }
+
     &__btn {
-    @include flex-center();
+        @include flex-center();
 
-        &--modifier
-
-            {
+        &--modifier {
 
             @include border-radius-btn();
             @include mobile-only;
@@ -163,10 +169,14 @@ object-fit: cover;
         &--text-decoration {
             @include text-btn-recherche;
         }
-}
+    }
 }
 
-
+@for $i from 0 to 9 {
+    .delay-#{$i} {
+        animation-delay: #{$i/10}s;
+    }
+}
 
 
 /*  Footer*/
@@ -176,20 +186,138 @@ object-fit: cover;
 
     &__logo {
         width: 50%;
+
         &--textModifLogofooter {
             @include textLogoFooter;
         }
-    
+
     }
 
- 
+
     &__textFooter {
         @include textfootermodif;
+
         &--icon-4 {
             margin-right: 10px;
-    
+
         }
     }
 
 
+}
+
+.menuListParent {
+    /*display: flex;
+    margin: 10px;
+    background-color: white;
+    border-radius: 20px;
+    height: 70px;
+    cursor: pointer;*/
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    border-radius: 0.75rem;
+    margin: 1rem 0;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+
+    &__enfantTitre1 {
+        /*display: flex;
+        width: 60%;
+        flex-direction: column;
+        margin-left: 17px;
+
+        &--text {
+            font-size: 10px;
+            line-height: 5px;
+        }*/
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+
+        &--text {
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+
+    &__enfantPrice {
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 0.5rem;
+    }
+
+    &__enfantConfirmation {
+
+        cursor: pointer;
+        background-color: #99E2D0;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+
+
+    }
+
+    &:hover &__enfantConfirmation {
+        margin-right: -1rem;
+    }
+
+    &__iconCheckContent {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        transform: rotate(180deg);
+        transition-duration: 2s;
+
+    }
+
+    &:hover &__iconCheckContent {
+        transform: rotate(0);
+    }
+
+    &__iconCheck {
+        color: red;
+    }
+
+
+/*  &__enfantPrice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+    }
+
+
+
+    &__enfantConfirmation {
+        cursor: pointer;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        background-color: aquamarine;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition-duration: 0.5s;
+        opacity: 0;
+
+        &:hover {
+            margin-right: 5rem;
+            opacity: 1;
+        }
+    }*/
 }

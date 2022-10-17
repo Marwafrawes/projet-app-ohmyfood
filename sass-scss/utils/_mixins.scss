@@ -1,20 +1,19 @@
-
-/*les mixins */ 
+/*les mixins */
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
-      
+
         transition: all 600ms ease-in-out;
-        &:hover
-        {
-            transform: scale(1.15);
-        
+
+        &:hover {
+            transform: scale(1.02);
+
         }
-  }
+    }
 
 }
 
 
-    
+
 @mixin border-main {
     border: 5px solid red;
 }
@@ -28,11 +27,13 @@
     width: 60%;
     padding: 15px;
 }
-@mixin localisation  {
-     
-        padding: 18px; 
-        background-color: $backgroundColorPrimaire;
+
+@mixin localisation {
+
+    padding: 18px;
+    background-color: $backgroundColorPrimaire;
 }
+
 @mixin flex-direction-colum {
     display: flex;
     flex-direction: column;
@@ -47,15 +48,17 @@
     border-radius: 30px;
     width: 75%;
     height: 63px;
-    opacity: 1; 
-    margin-top: 20px;/*DRY*/ 
+    opacity: 1;
+    margin-top: 20px;
+    /*DRY*/
     margin-bottom: 50px;
     cursor: pointer;
-  
+
 }
+
 @mixin text-btn-recherche {
     text-decoration: none;
-    color: white; 
+    color: white;
     font-size: 18px
 }
 
@@ -64,18 +67,20 @@
     font-weight: bold;
     margin: 20px;
 }
+
 @mixin button-modif {
-   
-    margin-left: 32px ;
+
+    margin-left: 32px;
     margin-bottom: 7%;
     border-radius: 30px;
     cursor: pointer;
     width: 85%;
     height: 75PX;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
-    background-color:  #f6f6f6;
+    background-color: #f6f6f6;
     margin-top: -10px;
 }
+
 @mixin icone-modif {
     border: $couleurPrimaire solid 3px;
     height: 25px;
@@ -91,18 +96,21 @@
     margin-top: -21px;
     margin-left: -15px;
 }
+
 @mixin btn--modifier {
     background-image: linear-gradient(#FF79DA, #9356DC);
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
-    
+
 }
+
 @mixin icone-modif1 {
     font-size: 18px;
     padding-right: 20px;
     text-decoration: none;
     color: #0000005c;
-   
+
 }
+
 @mixin modif-text {
     text-decoration: none;
     color: black;
@@ -111,8 +119,9 @@
 
 @mixin border-radius-img {
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px; 
+    border-top-right-radius: 20px;
 }
+
 @mixin bloc-img-restaurant {
     width: 95%;
     border-radius: $border-radius;
@@ -122,22 +131,26 @@
     margin-top: 20px;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
 }
+
 @mixin image-restaurant-specif {
     width: 100%;
     object-fit: cover;
     height: 65%;
 }
+
 @mixin text1ImageRestaurant {
     font-weight: $font-weight;
-         font-size: 20px;
-         margin-left: 9px;
+    font-size: 20px;
+    margin-left: 9px;
 }
+
 @mixin text2ImageRestaurant {
     font-weight: inherit;
     font-size: 15px;
     margin-top: -10px;
-    margin-left: 11px; 
+    margin-left: 11px;
 }
+
 @mixin cadreNouveau {
     align-items: center;
     width: 25%;
@@ -147,18 +160,20 @@
     margin-top: 17px;
     margin-left: 64%;
 }
+
 @mixin text-nouveau-restaurant {
     font-size: 17px;
     font-weight: $font-weight;
     color: $couleurTertiaire1;
 }
+
 @mixin heart {
     margin-top: -17%;
     margin-left: 85%;
     font-size: 35px;
     cursor: pointer;
     animation: heart 1s ease;
-    width:fit-content;
+    width: fit-content;
     font-weight: 400;
 }
 
@@ -167,35 +182,35 @@
     background-color: rgba(0, 0, 0, 0.747);
     padding: 20px;
 }
+
 @mixin textLogoFooter {
     color: $backgroundColor-white;
     font-weight: $font-weight;
     font-style: italic;
     font-size: 15px;
 }
+
 @mixin textfootermodif {
     color: $backgroundColor-white;
     font-size: 15px;
     font-weight: $font-weight;
-    display: flex;
-    flex-direction:row;
     margin-bottom: 5px;
 }
 
 @mixin heart {
     float: right;
-        margin: inherit;
-        height: 35px;
-        width: 35px;
-        background-color: transparent;
-        border: transparent 0px solid;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        position: relative;
-        background-color: black;
+    margin: inherit;
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: black;
 }
 
 
@@ -239,7 +254,8 @@
     justify-content: center;
     mix-blend-mode: lighten;
 }
-/*menus  */ 
+
+/*menus  */
 
 @mixin img_position {
     background-color: $backgroundColorSecondaire;
@@ -256,11 +272,13 @@
     font-style: italic;
     font-family: "Shrikhand", "cursive";
 }
+
 @mixin text1_menus {
     text-transform: uppercase;
     margin-left: 20px;
-  
+
 }
+
 @mixin heart_menus {
     float: right;
     margin: inherit;
@@ -283,32 +301,32 @@
     width: 40px;
     margin-bottom: 15px;
     margin-left: 18px;
-    
+
 }
 
 @mixin menuList {
     width: 95%;
-        margin-left: 10px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0px;
-        line-height: 0;
-        border: solid 2px white;
-        border-radius: 15px;
-        height: 60px;
-        background-color: white;
-        margin-bottom: 15px;
-        box-shadow:  3px 3px rgb(226, 226, 226);
-        cursor: pointer;
-        color: black;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    line-height: 0;
+    border: solid 2px white;
+    border-radius: 15px;
+    height: 60px;
+    background-color: white;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px rgb(226, 226, 226);
+    cursor: pointer;
+    color: black;
 }
 
 @mixin menuList-textModif1 {
-            font-size: 16px;
-            margin-left: 10px;
-            margin-top: 20px;   
-            cursor: pointer;
-            color: black;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: black;
 }
 
 @mixin menuList-textModif2 {
@@ -326,10 +344,11 @@
     font-size: 13px;
     font-weight: bold;
     display: flex;
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
 }
+
 @mixin menus-barreAnimation {
-    width: 15%;
+    width: 17%;
     height: 60px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -339,6 +358,6 @@
     align-items: center;
     background-color: $backgroundColorcouleurTertiaire;
     margin-left: 83%;
-    box-shadow:  3px 3px rgb(226, 226, 226);
+    box-shadow: 3px 3px rgb(226, 226, 226);
     cursor: pointer;
 }

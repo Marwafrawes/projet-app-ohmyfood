@@ -10,7 +10,10 @@ $backgroundColor-white:white;
 $backgroundColorPrimaire:rgba(224, 224, 224, 0.94); 
 $backgroundColorSecondaire: #F2F2F2;
 $backgroundColorcouleurTertiaire:#99E2D0; 
+$backgroundColorcouleurViolet: #9356DC;
 
 $breakpoints : (
-    mobile:668px
+    mobile:668px,
+    tablet:768px,
+    desktop:1366px,
 );
