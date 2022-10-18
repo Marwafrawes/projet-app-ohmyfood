@@ -144,7 +144,7 @@ a {
     overflow: hidden;
     cursor: pointer;
     line-height: 20px;
-    animation: itemAppear .6s;
+    animation: itemAppear 1s;
     animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
     animation-fill-mode: both;
     transform: scale(0);
@@ -189,7 +189,7 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        transition-duration: 0.5s;
+        transition-duration: 1s;
 
 
     }

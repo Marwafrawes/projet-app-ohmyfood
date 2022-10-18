@@ -206,28 +206,27 @@ a {
     display: flex;
     flex-direction: column;
   }
-  .headerPageAccueil .headerPageAccueil__logo {
+  .headerPageAccueil__logo {
     display: flex;
     justify-content: center;
   }
-  .headerPageAccueil .headerPageAccueil__logo .headerPageAccueil__logo--modifierLogoAccueil {
+  .headerPageAccueil__logo--modifierLogoAccueil {
     width: 20%;
   }
-  .main-recherche .main-recherche__btn--modifier {
+  .main-recherche__btn--modifier {
     width: 25%;
   }
-  .main-fonction .main-fonction__texte {
+  .main-fonction__texte {
     font-size: 25px;
     font-weight: bold;
     margin: 20px;
   }
-  .main-fonction .main-fonction__btn {
+  .main-fonction__btn {
     display: flex;
     flex-direction: row;
     margin: 0;
-    /*DRY*/
   }
-  .main-fonction .main-fonction__btn .main-fonction__btn--modif {
+  .main-fonction__btn--modif {
     width: 30%;
     margin-bottom: 2%;
   }
@@ -243,8 +242,12 @@ a {
     width: 50%;
     height: 300px;
   }
-  .main-restaurants .main-restaurants__bloc-img--cadreNouveau {
-    margin-left: 20%;
+  .main-restaurants .main-restaurants__bloc-img .main-restaurants__bloc-img--cadreNouveau {
+    margin-left: 36%;
+    width: 8%;
+  }
+  .main-restaurants__displayDesktop {
+    display: flex;
   }
   .FooterPageAccueil {
     display: flex;

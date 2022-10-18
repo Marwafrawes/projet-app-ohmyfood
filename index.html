@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oh-my-food</title>
-    
-  
+
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,26 +17,28 @@
 
     <link rel="stylesheet" href="./sass-scss/normalize.css" />
     <link rel="stylesheet" href="./sass-scss/style.css" />
+    <link rel="stylesheet" href="./sass-scss/breakpoints.scss"/>
     <link rel="stylesheet" href="./sass-scss/phone.css" />
+    
 </head>
 
 <body>
-<!--Loader -->
+    <!--Loader -->
     <div class="loader">
         <div class="loader__ring"></div>
         <span>loading...</span>
     </div>
-    
+
     <!--Page d'accueil -->
 
     <header class="headerPageAccueil">
         <div class="headerPageAccueil__logo">
-           
+
             <img class="headerPageAccueil__logo--modifierLogoAccueil" src="./assets/images/logo/ohmyfood.png"
                 alt="logo-page-accueil" />
         </div>
         <div class="headerPageAccueil__localisation">
-          
+
             <div class="headerPageAccueil__localisation--icone">
                 <i class="headerPageAccueil__localisation--modif fa-solid fa-location-dot"></i>
                 <label class="headerPageAccueil__localisation--text">Paris, Belleville</label>
@@ -49,10 +51,10 @@
     <main class="main-recherche">
 
         <section class="main-recherche__menuList">
-      
+
 
             <div class="main-recherche__menuList--retrouveListe">
-              
+
                 <p class="main-recherche__menuList--modifText">Réservez le menu qui </p>
                 <p class="main-recherche__menuList--modifText">vous convient</p>
                 <p class="main-recherche__menuList--modifText1">Découvrez des restaurants d'exception,</p>
@@ -62,7 +64,7 @@
         </section>
 
         <section class="main-recherche__btn">
-        
+
 
             <button class="main-recherche__btn--modifier">
                 <a href="#" class="main-recherche__btn--text-decoration">Explorer nos restaurants </a>
@@ -111,88 +113,94 @@
 
     </main>
 
-      <!--Parti cards restaurants -->
+    <!--Parti cards restaurants -->
 
-      <main class="main-restaurants">
-            <label class="main-restaurants__texte">Restaurants</label>
+    <main class="main-restaurants">
+        <label class="main-restaurants__texte">Restaurants</label>
         
-        <section class="main-restaurants__bloc-img">
+        <div class="main-restaurants__displayDesktop">
 
-           
-            <div class="main-restaurants__bloc-img--cadreNouveau">  
-                <label class="main-restaurants__bloc-img--text-nouveau-restaurant">Nouveau</label>
-            </div>
-            <a href="./pages/menu1-la-palette-du-gout.html" >
-            <img class="main-restaurants__bloc-img--restaurant-modif"
-                src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout">
-            </a>
+            <section class="main-restaurants__bloc-img">
+
+
+                <div class="main-restaurants__bloc-img--cadreNouveau">
+                    <label class="main-restaurants__bloc-img--text-nouveau-restaurant">Nouveau</label>
+                </div>
+                <a href="./pages/menu1-la-palette-du-gout.html">
+                    <img class="main-restaurants__bloc-img--restaurant-modif"
+                        src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="La palette du gout">
+                </a>
                 <div class="main-restaurants__heart">
                     <i class="main-restaurants__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
                     <i class="main-restaurants__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
                 </div>
 
-            <h3 class="main-restaurants__bloc-img--text1ImageRestaurant"> La palette du goût</h3>
-            <label class="main-restaurants__bloc-img--text2ImageRestaurant">Ménilmontant</label>
+                <h3 class="main-restaurants__bloc-img--text1ImageRestaurant"> La palette du goût</h3>
+                <label class="main-restaurants__bloc-img--text2ImageRestaurant">Ménilmontant</label>
 
 
-        </section>
+            </section>
 
-        <section class="main-restaurants__bloc-img">
+            <section class="main-restaurants__bloc-img">
 
-           
-            <div class="main-restaurants__bloc-img--cadreNouveau">  
-                <label class="main-restaurants__bloc-img--text-nouveau-restaurant">Nouveau</label>
-            </div>
-            <a href="./pages/menu2-la-note-enchantee.html">
-            <img class="main-restaurants__bloc-img--restaurant-modif"
-            src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-            alt="La note enchantée"></a>
 
-                <div class="main-restaurants__heart">
-                    <i class="main-restaurants__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
-                    <i class="main-restaurants__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
+                <div class="main-restaurants__bloc-img--cadreNouveau">
+                    <label class="main-restaurants__bloc-img--text-nouveau-restaurant">Nouveau</label>
                 </div>
-
-            <h3 class="main-restaurants__bloc-img--text1ImageRestaurant">La note enchantée</h3>
-            <label class="main-restaurants__bloc-img--text2ImageRestaurant">Charonne</label>
-
-
-        </section>
-
-        <section class="main-restaurants__bloc-img">
-
-            <a href="./pages/menu3-la-francaise.html">
-            <img class="main-restaurants__bloc-img--restaurant-modif"
-            src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="À la française"></a>
+                <a href="./pages/menu2-la-note-enchantee.html">
+                    <img class="main-restaurants__bloc-img--restaurant-modif"
+                        src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                        alt="La note enchantée"></a>
 
                 <div class="main-restaurants__heart">
                     <i class="main-restaurants__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
                     <i class="main-restaurants__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
                 </div>
 
-            <h3 class="main-restaurants__bloc-img--text1ImageRestaurant">À la française</h3>
-            <label class="main-restaurants__bloc-img--text2ImageRestaurant">Cité Rouge</label>
+                <h3 class="main-restaurants__bloc-img--text1ImageRestaurant">La note enchantée</h3>
+                <label class="main-restaurants__bloc-img--text2ImageRestaurant">Charonne</label>
 
 
-        </section>
+            </section>
+        </div>
 
-        <section class="main-restaurants__bloc-img">
+        <div class="main-restaurants__displayDesktop">
+            <section class="main-restaurants__bloc-img">
 
-            <a href="./pages/menu4-délices-des-sens.html">
-            <img class="main-restaurants__bloc-img--restaurant-modif"
-            src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Le délice des sens"></a>
+                <a href="./pages/menu3-la-francaise.html">
+                    <img class="main-restaurants__bloc-img--restaurant-modif"
+                        src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="À la française"></a>
 
                 <div class="main-restaurants__heart">
                     <i class="main-restaurants__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
                     <i class="main-restaurants__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
                 </div>
 
-            <h3 class="main-restaurants__bloc-img--text1ImageRestaurant">Le délice des sens</h3>
-            <label class="main-restaurants__bloc-img--text2ImageRestaurant">Folie-Méricourt</label>
+                <h3 class="main-restaurants__bloc-img--text1ImageRestaurant">À la française</h3>
+                <label class="main-restaurants__bloc-img--text2ImageRestaurant">Cité Rouge</label>
 
 
-        </section>
+            </section>
 
+            <section class="main-restaurants__bloc-img">
+
+                <a href="./pages/menu4-délices-des-sens.html">
+                    <img class="main-restaurants__bloc-img--restaurant-modif"
+                        src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                        alt="Le délice des sens"></a>
+
+                <div class="main-restaurants__heart">
+                    <i class="main-restaurants__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
+                    <i class="main-restaurants__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
+                </div>
+
+                <h3 class="main-restaurants__bloc-img--text1ImageRestaurant">Le délice des sens</h3>
+                <label class="main-restaurants__bloc-img--text2ImageRestaurant">Folie-Méricourt</label>
+
+
+            </section>
+        </div>
     </main>
 
 
@@ -212,35 +220,32 @@
                     <p3 class="FooterPageAccueil__textFooter">Proposer un restaurant</p3>
                 </a>
             </div>
-      
+
             <div class="FooterPageAccueil__textFooter">
                 <i class="FooterPageAccueil__textFooter--icon-4 fa-sharp fa-solid fa-handshake"></i>
                 <a href="#">
                     <p3 class="FooterPageAccueil__textFooter">Devenir partenaire</p3>
                 </a>
             </div>
-        
+
             <div class="FooterPageAccueil__textFooter">
                 <a href="#">
                     <p3 class="FooterPageAccueil__textFooter">Mention légales</p3>
                 </a>
             </div>
-       
+
             <div class="FooterPageAccueil__textFooter">
                 <a href="mailto:adresse@serveur.com">
                     <p3 class="FooterPageAccueil__textFooter">Contact</p3>
                 </a>
             </div>
         </section>
-     
+
 
 
     </footer>
- 
+
 
 </body>
 
 </html>
-
-            
-
