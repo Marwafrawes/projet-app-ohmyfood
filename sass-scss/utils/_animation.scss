@@ -24,3 +24,57 @@
       transform: scale(1);
   }
 }
+
+@for $i from 0 to 9 {
+  .delay-#{$i} {
+      animation-delay: #{$i/10}s;
+  }
+}
+
+/*Loader*/ 
+@keyframes ring {
+  0%{
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #9356DC;
+  }
+  50%{
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #FF79DA;
+  }
+ 100%{
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #99E2D0;
+  }
+
+}
+
+@keyframes text {
+  0%{
+    color:#99E2D0;
+  }
+  50%{
+    color:#FF79DA;
+  }
+  50%{
+    color:#9356DC ;
+  }
+}
+
+@keyframes disparition {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes slideTitre {
+  from {
+    margin-bottom: 100%;
+  }
+  to {
+    margin-bottom: 0%;
+  }
+}
