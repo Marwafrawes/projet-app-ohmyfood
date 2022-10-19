@@ -16,9 +16,6 @@ a {
 /*Footer*/
 /*menus  */
 /*header*/
-.headerPageAccueil {
-  border: 5px solid red;
-}
 .headerPageAccueil__logo {
   display: flex;
   flex-direction: row;
@@ -38,7 +35,6 @@ a {
 
 /*main*/
 .mainImgRestaurantImg {
-  border: 5px solid red;
   margin-bottom: -15%;
 }
 .mainImgRestaurantImg__img-restaurant {
@@ -49,7 +45,6 @@ a {
 }
 
 .mainCarteRestaurant {
-  border: 5px solid red;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   background-color: #F2F2F2;
@@ -134,16 +129,15 @@ a {
   justify-content: center;
 }
 .mainCarteRestauranMenus__btn--modifier {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
   border-radius: 30px;
   width: 75%;
   height: 63px;
   opacity: 1;
   margin-top: 20px;
-  /*DRY*/
   margin-bottom: 50px;
   cursor: pointer;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
   margin-bottom: 20%;
 }
 @media screen and (max-width: 668px) {
@@ -238,7 +232,6 @@ a {
 
 /*  Footer*/
 .FooterPageAccueil {
-  border: 5px solid red;
   background-color: rgba(0, 0, 0, 0.747);
   padding: 20px;
 }

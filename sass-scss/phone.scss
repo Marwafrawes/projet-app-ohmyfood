@@ -19,52 +19,9 @@ a {
 @import "./breakpoints.scss";
 
 /*loader*/
-.loader
-{
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  height: 100%;
-  background: black;
-  width: 100%;
-  animation: disparition 1s 1s both;
-  &__ring
-  {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    animation: ring 3s linear infinite;
-    
-     &__ring::before
-     {
-      position: absolute;
-      content: '';
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      box-shadow: 0 0 rgba(255,255,255,.3);
-      
-     }
-  }
-}
-span
-{
-  color: #737373;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.25px;
-  line-height: 200px;
-  
-}
-/*Page d'accueil*/
+@include loader;
 
+/*header*/
 .headerPageAccueil {
     @include flex-direction-colum();
 
@@ -72,10 +29,8 @@ span
 
     &__logo {
         @include flex-center();
-
+        box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.82);
         &--modifierLogoAccueil
-
-        /*petit-enfant--LOGO*/
             {
             @include modifierLogoAccueil;
 
@@ -84,25 +39,18 @@ span
 
     &__localisation
 
-    /*enfant 2--LOCALISATION*/
         {
         @include flex-direction-row();
         @include flex-center();
         @include localisation;
 
         &--icone {
-            size: 10px;
-
-        }
-
-        &--modif {
-            font-size: 20px;
+            
+            font-size: 18px;
         }
 
         &--text {
-            margin-left: 18px;
-            /*le mixin ne fonctionne pas */
-            font-size: 18px;
+            @include localisation-text;
         }
 
     }
@@ -111,40 +59,32 @@ span
 }
 
 
-.main-recherche
+.main-description
     {
 
-    background-color: $backgroundColorSecondaire;
-    padding: 23px;
-
+   @include main-description;
+   @include flex-direction-colum;
     &__menuList
         {
-        @include flex-center();
+        @include flex-direction-colum;
 
         &--retrouveListe
             {
 
-            @include flex-direction-colum();
-
-            width: 100%;
+            line-height: 5px;
         }
 
         &--modifText {
-            margin: 0px;
+            
             @include flex-center();
-            font-weight: $font-weight;
-            font-size: 27px;
-            line-height: 15px;
-            margin-top: 15px;
+            @include modifTextMainDescription;
+           
         }
 
         &--modifText1 {
-            margin: 0px;
+            
             @include flex-center();
-            font-size: 18px;
-            line-height: 10px;
-            margin-top: 18px;
-            color: #6a6a6a;
+            @include modifText1MainDescription;
         }
     }
 
@@ -155,9 +95,8 @@ span
 
         &--modifier {
 
-            @include border-radius-btn();
+            @include btn--modifier-main-description();
             @include mobile-only;
-            @include btn--modifier;
 
         }
 
@@ -173,8 +112,6 @@ span
     &__texte {
         @include main-fonction-texte;
 
-        padding: 20px;
-        /*DRY*/
     }
 
     &__btn {
@@ -184,7 +121,7 @@ span
 
         /*DRY*/
         &--modif {
-            @include button-modif;
+            @include button-modif-fonctionnement;
             @include mobile-only;
 
         }
@@ -218,10 +155,11 @@ button:hover {
 /*main 3 */
 .main-restaurants {
     background-color: $backgroundColorSecondaire;
-
+    height: 1180px;
+ @include flex-direction-colum; 
 
     &__texte {
-        @include main-fonction-texte;
+        @include main-restaurant-texte;
     }
 
     &__heart {

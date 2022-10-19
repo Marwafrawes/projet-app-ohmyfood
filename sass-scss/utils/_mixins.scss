@@ -12,7 +12,50 @@
 
 }
 
+@mixin loader {
+    .loader {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        height: 100%;
+        background: black;
+        width: 100%;
+        animation: disparition 1s 1s both;
 
+        &__ring {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            animation: ring 3s linear infinite;
+
+            &__ring::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                box-shadow: 0 0 rgba(255, 255, 255, .3);
+
+            }
+        }
+    }
+
+    span {
+        color: #737373;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1.25px;
+        line-height: 200px;
+
+    }
+}
 
 @mixin border-main {
     border: 5px solid red;
@@ -30,9 +73,46 @@
 
 @mixin localisation {
 
-    padding: 18px;
+    padding: 15px;
     background-color: $backgroundColorPrimaire;
 }
+
+@mixin localisation-text {
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+@mixin main-description {
+    background-color: $backgroundColorSecondaire;
+    padding: 23px;
+
+}
+
+@mixin modifTextMainDescription {
+
+    font-weight: $font-weight;
+    font-size: 23px;
+}
+
+@mixin modifText1MainDescription {
+    font-size: 17px;
+    color: $couleurText;
+}
+
+@mixin btn--modifier-main-description {
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    border-radius: 35px;
+    height: 63px;
+    width: 75%;
+    opacity: 1;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+
+}
+
+
 
 @mixin flex-direction-colum {
     display: flex;
@@ -44,17 +124,7 @@
     flex-direction: row;
 }
 
-@mixin border-radius-btn {
-    border-radius: 30px;
-    width: 75%;
-    height: 63px;
-    opacity: 1;
-    margin-top: 20px;
-    /*DRY*/
-    margin-bottom: 50px;
-    cursor: pointer;
 
-}
 
 @mixin text-btn-recherche {
     text-decoration: none;
@@ -63,20 +133,26 @@
 }
 
 @mixin main-fonction-texte {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bold;
-    margin: 20px;
+    margin: 51px 34px 38px 15px;
+
+
 }
+@mixin main-restaurant-texte {
+    font-size: 23px;
+font-weight: bold;
+margin: 44px 24px -10px 15px;
+}
+@mixin button-modif-fonctionnement {
 
-@mixin button-modif {
-
-    margin-left: 32px;
+    margin-left: 20px;
     margin-bottom: 7%;
     border-radius: 30px;
     cursor: pointer;
-    width: 85%;
-    height: 75PX;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    width: 90%;
+    height: 91PX;
+    box-shadow: 3px 5px 3px 1px rgba(0, 0, 0, 0.11);
     background-color: #f6f6f6;
     margin-top: -10px;
 }
@@ -97,11 +173,7 @@
     margin-left: -15px;
 }
 
-@mixin btn--modifier {
-    background-image: linear-gradient(#FF79DA, #9356DC);
-    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
 
-}
 
 @mixin icone-modif1 {
     font-size: 18px;
@@ -125,10 +197,10 @@
 @mixin bloc-img-restaurant {
     width: 95%;
     border-radius: $border-radius;
-    margin: 10px;
+    margin-top: 25px;
+    margin-left: 10px;
     background-color: $backgroundColor-white;
-    height: 260px;
-    margin-top: 20px;
+    height: 240px;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
 }
 
@@ -187,14 +259,16 @@
     color: $backgroundColor-white;
     font-weight: $font-weight;
     font-style: italic;
-    font-size: 15px;
+    font-size: 21px;
 }
 
 @mixin textfootermodif {
     color: $backgroundColor-white;
     font-size: 15px;
     font-weight: $font-weight;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+
+    
 }
 
 @mixin heart {

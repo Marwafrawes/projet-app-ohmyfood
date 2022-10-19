@@ -25,7 +25,7 @@ a {
 
 
 .headerPageAccueil {
-    @include border-main;
+
 
     &__logo {
         @include flex-direction-row;
@@ -48,7 +48,7 @@ a {
 /*main*/
 
 .mainImgRestaurantImg {
-    @include border-main;
+    
     margin-bottom: -15%;
 
     &__img-restaurant {
@@ -60,7 +60,7 @@ a {
 }
 
 .mainCarteRestaurant {
-    @include border-main;
+    
     @include border-radius-top-leftRight;
     @include img_position;
 }
@@ -226,7 +226,7 @@ a {
 
 /*  Footer*/
 .FooterPageAccueil {
-    @include border-main();
+ 
     @include FooterPageAccueil;
 
     &__logo {
