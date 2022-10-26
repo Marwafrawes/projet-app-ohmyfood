@@ -13,13 +13,9 @@ a {
 }
 
 
-
-
-
-
 @import "../utils/variables";
 @import "../utils/mixins";
-
+@import "../breakpoints.scss";
 
 /*header*/
 
@@ -103,9 +99,7 @@ a {
         @include text1_menus;
 
         &--modif {
-            font-size: 15px;
-            margin-bottom: 5px;
-            opacity: 0.6;
+           @include textentreeplatsdissert;
 
         }
 
@@ -120,10 +114,9 @@ a {
 
         &--modifier {
 
-            @include border-radius-btn();
+            @include btn--modifier-main-description;
             @include mobile-only;
-            @include btn--modifier;
-            margin-bottom: 20%;
+           
         }
 
         &--text-decoration {
@@ -226,7 +219,7 @@ a {
 
 /*  Footer*/
 .FooterPageAccueil {
- 
+
     @include FooterPageAccueil;
 
     &__logo {

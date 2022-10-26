@@ -15,6 +15,7 @@ a {
 /*les variables */ /*les mixins */
 /*Footer*/
 /*menus  */
+/*page-menu-phone*/
 @-webkit-keyframes heart {
   0% {
     transform: scale(1);
@@ -201,62 +202,10 @@ a {
     margin-bottom: 0%;
   }
 }
-@media (min-width: 768px) and (max-width: 1600px) {
-  .headerPageAccueil {
-    display: flex;
-    flex-direction: column;
-  }
-  .headerPageAccueil__logo {
-    display: flex;
-    justify-content: center;
-  }
-  .headerPageAccueil__logo--modifierLogoAccueil {
-    width: 20%;
-  }
-  .main-recherche__btn--modifier {
-    width: 25%;
-  }
-  .main-fonction__texte {
-    font-size: 23px;
-    font-weight: bold;
-    margin: 51px 34px 38px 15px;
-  }
-  .main-fonction__btn {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-  }
-  .main-fonction__btn--modif {
-    width: 30%;
-    margin-bottom: 2%;
-  }
-  .main-restaurants {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    padding: 20px;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .main-restaurants__bloc-img {
-    width: 50%;
-    height: 300px;
-  }
-  .main-restaurants__bloc-img--cadreNouveau {
-    margin-left: 36%;
-    width: 8%;
-  }
-  .main-restaurants__displayDesktop {
-    display: flex;
-  }
-  .FooterPageAccueil {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
-}
+/*les mixins */
+/*Footer*/
+/*menus  */
+/*page-menu-phone*/
 /*loader*/
 .loader {
   position: fixed;
@@ -372,6 +321,8 @@ span {
 }
 @media screen and (max-width: 668px) {
   .main-description__btn--modifier {
+    grid-template-columns: -webkit-max-content;
+    grid-template-columns: max-content;
     transition: all 600ms ease-in-out;
   }
   .main-description__btn--modifier:hover {
@@ -408,6 +359,8 @@ span {
 }
 @media screen and (max-width: 668px) {
   .main-fonction__btn--modif {
+    grid-template-columns: -webkit-max-content;
+    grid-template-columns: max-content;
     transition: all 600ms ease-in-out;
   }
   .main-fonction__btn--modif:hover {
@@ -517,6 +470,8 @@ button:hover {
 }
 @media screen and (max-width: 668px) {
   .main-restaurants__bloc-img {
+    grid-template-columns: -webkit-max-content;
+    grid-template-columns: max-content;
     transition: all 600ms ease-in-out;
   }
   .main-restaurants__bloc-img:hover {
@@ -584,4 +539,61 @@ button:hover {
   margin-right: 10px;
 }
 
-/*Desktop*//*# sourceMappingURL=phone.css.map */
+/*Responsive*/
+@media (min-width: 669px) and (max-width: 1800px) {
+  .headerPageAccueil {
+    display: flex;
+    flex-direction: column;
+  }
+  .headerPageAccueil__logo {
+    display: flex;
+    justify-content: center;
+  }
+  .headerPageAccueil__logo--modifierLogoAccueil {
+    width: 20%;
+  }
+  .main-description__btn--modifier {
+    width: 25%;
+  }
+  .main-fonction__texte {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 51px 34px 38px 15px;
+  }
+  .main-fonction__btn {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+  .main-fonction__btn--modif {
+    width: 30%;
+    margin-bottom: 2%;
+  }
+  .main-restaurants {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    height: 810px;
+  }
+  .main-restaurants__bloc-img {
+    width: 50%;
+    height: 300px;
+  }
+  .main-restaurants__bloc-img--cadreNouveau {
+    margin-left: 36%;
+    width: 8%;
+  }
+  .main-restaurants__displayDesktop {
+    display: flex;
+  }
+  .FooterPageAccueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=phone.css.map */

@@ -1,7 +1,7 @@
 /*les mixins */
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
-
+         grid-template-columns: max-content;
         transition: all 600ms ease-in-out;
 
         &:hover {
@@ -434,4 +434,14 @@ margin: 44px 24px -10px 15px;
     margin-left: 83%;
     box-shadow: 3px 3px rgb(226, 226, 226);
     cursor: pointer;
+}
+
+
+/*page-menu-phone*/ 
+
+@mixin textentreeplatsdissert {
+    font-size: 15px;
+    margin-bottom: 5px;
+    opacity: 0.6;
+    margin-top: 30px;
 }
