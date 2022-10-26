@@ -44,7 +44,7 @@ a {
 /*main*/
 
 .mainImgRestaurantImg {
-    
+
     margin-bottom: -15%;
 
     &__img-restaurant {
@@ -56,11 +56,12 @@ a {
 }
 
 .mainCarteRestaurant {
-    
+
     @include border-radius-top-leftRight;
     @include img_position;
 }
-.mainCarteRestauranMenus{
+
+.mainCarteRestauranMenus {
     &__blocText {
         @include flex-direction-row;
         justify-content: space-around;
@@ -99,7 +100,7 @@ a {
         @include text1_menus;
 
         &--modif {
-           @include textentreeplatsdissert;
+            @include textentreeplatsdissert;
 
         }
 
@@ -116,7 +117,7 @@ a {
 
             @include btn--modifier-main-description;
             @include mobile-only;
-           
+
         }
 
         &--text-decoration {
@@ -126,7 +127,7 @@ a {
 }
 
 .menuListRestaurant {
- 
+
     height: 60px;
     background-color: $backgroundColor-white;
     padding: 10px;
@@ -144,24 +145,25 @@ a {
 
 
     &__descriptionMenu {
-      
+
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
         flex: 1;
 
-            &--titre {
-                margin: 0;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                font-size: 15px;
-            }
-            &--description{
-                font-size: 13px;
-                opacity: 0.5;
+        &--titre {
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 15px;
+        }
 
-            }
+        &--description {
+            font-size: 13px;
+            opacity: 0.5;
+
+        }
     }
 
     &__price {
@@ -209,8 +211,8 @@ a {
     }
 
     &__iconCheck {
-            color: white;
-            font-size: 18px;
+        color: white;
+        font-size: 18px;
     }
 
 
@@ -244,42 +246,33 @@ a {
 
 }
 
-/*Responsive*/ 
+/*Responsive*/
 @media (min-width:669px) and (max-width: 1800px) {
 
-    .mainImgRestaurantImg
-    {
+    .mainImgRestaurantImg {
         margin: 0;
     }
- .mainCarteRestauranMenus__text
- {
-    display: flex;
-    flex-direction: row;
- }
-.test-row
-{
-    display: flex;
-    flex-direction: row;
-}
 
-.mainCarteRestaurantBlock
-{
-    display: flex;
+    .mainCarteRestauranMenus__blocText {
+        
+        justify-content: center;
+        margin-left: 10px;  
+     }
 
-    &__entreeplatsdessert
-    {
-        width: 33%;
+    .mainCarteRestaurantBlock {
+        display: flex;
+
+        &__entreeplatsdessert {
+            width: 33%;
+        }
+
     }
 
-}
 
+    .mainCarteRestauranMenus__btn--modifier {
+        width: 20%;
 
-
-.mainCarteRestauranMenus__btn--modifier
-{
-width: 20%;
-
-}
+    }
 
 
 
@@ -291,6 +284,5 @@ width: 20%;
         align-items: center;
 
     }
-   
-}
 
+}

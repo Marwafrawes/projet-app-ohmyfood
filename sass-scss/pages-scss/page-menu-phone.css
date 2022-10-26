@@ -266,13 +266,9 @@ a {
   .mainImgRestaurantImg {
     margin: 0;
   }
-  .mainCarteRestauranMenus__text {
-    display: flex;
-    flex-direction: row;
-  }
-  .test-row {
-    display: flex;
-    flex-direction: row;
+  .mainCarteRestauranMenus__blocText {
+    justify-content: center;
+    margin-left: 10px;
   }
   .mainCarteRestaurantBlock {
     display: flex;
