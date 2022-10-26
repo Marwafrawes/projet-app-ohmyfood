@@ -428,6 +428,7 @@ button:hover {
   cursor: pointer;
   position: relative;
   background-color: black;
+  right: 10%;
 }
 .main-restaurants__heart:hover::before {
   opacity: 1;
@@ -541,10 +542,6 @@ button:hover {
 
 /*Responsive*/
 @media (min-width: 669px) and (max-width: 1800px) {
-  .headerPageAccueil {
-    display: flex;
-    flex-direction: column;
-  }
   .headerPageAccueil__logo {
     display: flex;
     justify-content: center;
@@ -559,10 +556,12 @@ button:hover {
     font-size: 23px;
     font-weight: bold;
     margin: 51px 34px 38px 15px;
+    text-align: center;
   }
   .main-fonction__btn {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin: 0;
   }
   .main-fonction__btn--modif {

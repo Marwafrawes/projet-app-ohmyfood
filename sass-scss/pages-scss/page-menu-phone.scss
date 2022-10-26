@@ -244,3 +244,53 @@ a {
 
 }
 
+/*Responsive*/ 
+@media (min-width:669px) and (max-width: 1800px) {
+
+    .mainImgRestaurantImg
+    {
+        margin: 0;
+    }
+ .mainCarteRestauranMenus__text
+ {
+    display: flex;
+    flex-direction: row;
+ }
+.test-row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.mainCarteRestaurantBlock
+{
+    display: flex;
+
+    &__entreeplatsdessert
+    {
+        width: 33%;
+    }
+
+}
+
+
+
+.mainCarteRestauranMenus__btn--modifier
+{
+width: 20%;
+
+}
+
+
+
+    .FooterPageAccueil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+   
+}
+

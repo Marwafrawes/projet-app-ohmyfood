@@ -112,6 +112,7 @@ a {
 
     &__btn {
         @include flex-direction-colum;
+        
 
         margin-bottom: 10%;
 
@@ -249,8 +250,6 @@ button:hover {
 @media (min-width:669px) and (max-width: 1800px) {
     .headerPageAccueil {
 
-        @include flex-direction-colum();
-
         &__logo {
             @include flex-center();
 
@@ -272,10 +271,12 @@ button:hover {
 
         &__texte {
             @include main-fonction-texte;
+            text-align: center;
         }
 
         &__btn {
             @include flex-direction-row;
+            justify-content: center;
             margin: 0;
 
             &--modif {

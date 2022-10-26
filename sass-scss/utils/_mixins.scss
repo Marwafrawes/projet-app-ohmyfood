@@ -112,8 +112,6 @@
 
 }
 
-
-
 @mixin flex-direction-colum {
     display: flex;
     flex-direction: column;
@@ -123,8 +121,6 @@
     display: flex;
     flex-direction: row;
 }
-
-
 
 @mixin text-btn-recherche {
     text-decoration: none;
@@ -231,6 +227,7 @@ margin: 44px 24px -10px 15px;
     position: absolute;
     margin-top: 17px;
     margin-left: 64%;
+    
 }
 
 @mixin text-nouveau-restaurant {
@@ -285,6 +282,7 @@ margin: 44px 24px -10px 15px;
     cursor: pointer;
     position: relative;
     background-color: black;
+    right: 10%;
 }
 
 
