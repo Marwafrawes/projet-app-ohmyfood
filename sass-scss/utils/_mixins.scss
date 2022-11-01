@@ -125,7 +125,8 @@
 @mixin text-btn-recherche {
     text-decoration: none;
     color: white;
-    font-size: 18px
+    font-size: 17px;
+    font-weight: inherit;
 }
 
 @mixin main-fonction-texte {
@@ -146,13 +147,14 @@
 
     margin-left: 20px;
     margin-bottom: 7%;
-    border-radius: 30px;
+    border-radius: 15px;
     cursor: pointer;
     width: 90%;
-    height: 91PX;
+    height: 75PX;
     box-shadow: 3px 5px 3px 1px rgba(0, 0, 0, 0.11);
     background-color: #f6f6f6;
     margin-top: -10px;
+    border: transparent;
 }
 
 @mixin icone-modif {
@@ -265,7 +267,8 @@
     color: $backgroundColor-white;
     font-size: 15px;
     font-weight: $font-weight;
-    margin-bottom: 10px;
+    margin: 3px;
+    display: flex;
 
 
 }
