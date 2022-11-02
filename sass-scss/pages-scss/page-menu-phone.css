@@ -148,6 +148,7 @@ a {
   margin-top: 20px;
   margin-bottom: 50px;
   cursor: pointer;
+  border: transparent;
 }
 @media screen and (max-width: 668px) {
   .mainCarteRestauranMenus__btn--modifier {

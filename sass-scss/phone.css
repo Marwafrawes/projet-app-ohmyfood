@@ -322,6 +322,7 @@ span {
   margin-top: 20px;
   margin-bottom: 50px;
   cursor: pointer;
+  border: transparent;
 }
 @media screen and (max-width: 668px) {
   .main-description__btn--modifier {

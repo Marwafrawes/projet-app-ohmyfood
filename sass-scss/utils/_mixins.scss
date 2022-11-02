@@ -109,6 +109,7 @@
     margin-top: 20px;
     margin-bottom: 50px;
     cursor: pointer;
+    border: transparent;
 
 }
 
@@ -127,6 +128,7 @@
     color: white;
     font-size: 17px;
     font-weight: inherit;
+    
 }
 
 @mixin main-fonction-texte {
