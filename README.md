@@ -4,7 +4,7 @@ C'est une application : Mobile first
 # Cahier de charge
 Un cahier de charge ainsi des maquettes ont été fournis. 
 Rendez-vous sur [cahier](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf) !
-##Maquettes : 
-
+##*Maquettes* : 
+![desktop reservia](C:\Users\marwa\Desktop\Projets Openclassrooms\projet 3)
 # Outils et languages utilisés 
 HTML5+ CSS3 + un language de script préprocesseur SASS 
