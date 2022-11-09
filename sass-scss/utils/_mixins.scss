@@ -23,7 +23,7 @@
         align-items: center;
         min-height: 100vh;
         height: 100%;
-        background: black;
+        background: rgb(255, 255, 255);
         width: 100%;
         animation: disparition 1s 1s both;
 
@@ -228,7 +228,8 @@
 @mixin cadreNouveau {
     align-items: center;
     width: 25%;
-    height: 5%;
+    height: 30px;
+    left: 0px;
     background-color: $couleurTertiaire;
     position: absolute;
     margin-top: 17px;
@@ -242,15 +243,7 @@
     color: $couleurTertiaire1;
 }
 
-@mixin heart {
-    margin-top: -17%;
-    margin-left: 85%;
-    font-size: 35px;
-    cursor: pointer;
-    animation: heart 1s ease;
-    width: fit-content;
-    font-weight: 400;
-}
+
 
 /*Footer*/
 @mixin FooterPageAccueil {
@@ -265,23 +258,14 @@
     font-size: 21px;
 }
 
-@mixin textfootermodif {
-    color: $backgroundColor-white;
-    font-size: 15px;
-    font-weight: $font-weight;
-    margin: 3px;
-    display: flex;
 
 
-}
 
 @mixin heart {
     float: right;
     margin: inherit;
     height: 35px;
     width: 35px;
-    background-color: transparent;
-    border: transparent 0px solid;
     padding: 0;
     display: flex;
     align-items: center;
@@ -320,18 +304,16 @@
     mix-blend-mode: lighten;
 }
 
-@mixin like_menus {
-    transition-duration: .25s;
-    background-color: $backgroundColorSecondaire;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+
+
+@mixin textfootermodif {
+    color: $backgroundColor-white;
+    font-size: 15px;
+    font-weight: $font-weight;
+    margin: 3px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    mix-blend-mode: lighten;
+
+
 }
 
 /*menus  */

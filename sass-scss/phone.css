@@ -221,7 +221,7 @@ a {
   align-items: center;
   min-height: 100vh;
   height: 100%;
-  background: black;
+  background: rgb(255, 255, 255);
   width: 100%;
   -webkit-animation: disparition 1s 1s both;
           animation: disparition 1s 1s both;
@@ -405,7 +405,7 @@ button:hover {
   background-color: rgba(109, 0, 252, 0.0666666667);
 }
 
-.main-fonction__btn--modif:hover > .main-fonction__btn--modif-text > .main-fonction__btn--icone-modif1 {
+.main-fonction__btn--modif:hover > .main-fonction__btn--icone-modif1 {
   color: #9356DC;
 }
 
@@ -426,8 +426,6 @@ button:hover {
   margin: inherit;
   height: 35px;
   width: 35px;
-  background-color: transparent;
-  border: transparent 0px solid;
   padding: 0;
   display: flex;
   align-items: center;
@@ -491,7 +489,8 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 25%;
-  height: 5%;
+  height: 30px;
+  left: 0px;
   background-color: #99E2D0;
   position: absolute;
   margin-top: 17px;
